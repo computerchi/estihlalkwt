@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on اللجنة الكويتية المشتركة للإستهلال</title>
-    <link>http://estihlalkwt.com/blog/</link>
-    <description>Recent content in Blog on اللجنة الكويتية المشتركة للإستهلال</description>
+    <title>اللجنة الكويتية المشتركة للإستهلال</title>
+    <link>http://estihlalkwt.com/</link>
+    <description>Recent content on اللجنة الكويتية المشتركة للإستهلال</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 31 Jan 2019 07:48:15 +0300</lastBuildDate>
     
-	<atom:link href="http://estihlalkwt.com/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://estihlalkwt.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
