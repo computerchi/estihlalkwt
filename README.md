@@ -5,5 +5,4 @@ Welcome to the Kuwait Joint Committee for Crescent Sighting website.
 
 
 
-The site is under construction.
-الموقع تحت الصيانة.
+
