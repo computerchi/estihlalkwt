@@ -1,0 +1,96 @@
+<style>
+  .container {
+    max-width: {{ .Site.Params.containerMaxWidth | default "900px"| safeCSS }};
+  }
+
+  .jumbotron {
+    margin: 0;
+  }
+
+  #nav a {
+    font-weight: bold;
+    color: inherit;
+  }
+
+  #nav-border {
+    border-bottom-color: #9cbed1;
+  }
+
+  #main {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+
+  #home-jumbotron {
+    background-color: #9cbed1;
+    padding: 10px;
+  }
+
+  .title {
+    margin-top: 40px;
+  }
+
+  .font-125 {
+    font-size: 125%;
+  }
+
+  .tag-btn {
+    margin-bottom: 0.3em;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  body, .arabize {
+    direction: rtl;
+    text-align: right;
+  }
+
+  footer {
+    color: lightgray;
+    background-color: rgb(37, 37, 37);
+    margin: 0px;
+  }
+
+  .social {
+      margin: 0;
+      padding: 0;
+      text-decoration-style: none;
+  }
+
+  .social:enabled {
+      color: lightgray;
+      text-decoration-style: none;
+    }
+
+  .social:hover {
+      color: deepskyblue;
+      text-decoration-style: none;
+  }
+
+  .btn {
+    padding: 0px;
+  }
+
+  .btn-block {
+    background-color: #e3ebf0;
+    font-size: 1em;
+  }
+
+  .nav-link:hover {
+    background-color: #e3ebf0;
+    color: white;
+  }
+
+  .btn-block:hover {
+    background-color: #5b7e92;
+    color: white;
+  }
+
+  .section-header {
+    background-color: #e3ebf0;
+    padding: 0 4px 0 4px;
+  }
+
+</style>

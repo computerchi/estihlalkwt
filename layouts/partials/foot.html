@@ -1,0 +1,25 @@
+<footer class="page-footer font-small grey pt-4">
+  <div class="container container-fluid text-center text-md-left">
+    <div class="row">
+      <div class="col-md-9 mt-md-0 mt-3">
+        <h5 class="text-uppercase arabize">مع تحيات اللجنة الكويتية المشتركة للإستهلال</h5>
+        <p class="arabize">{{ .Site.Params.donate | markdownify }}</p>
+
+      </div>
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+        <h5 class="text-uppercase " style="text-align:inherit">تواصل معنا&nbsp;&nbsp;&nbsp;</h5>
+        {{ partial "social" (dict "href" "https://instagram.com/estihlalkwt?utm_source=ig_profile_share&igshid=t2fmpkjjm6y" "icon" "instagram") }}
+        {{ partial "social" (dict "href" "https://twitter.com/estihlalkwt" "icon" "twitter") }}
+        {{ partial "social" (dict "href" "https://www.youtube.com/channel/UCRcfhUWPRaD8GQwqKvGx8IA" "icon" "youtube") }}
+        {{ partial "social" (dict "href" "https://t.me/estihlalkwt" "icon" "send") }}
+      </div>
+    </div>
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="direction:ltr">
+    <a href="https://estihlalkwt.com" class="social btn">©2019 estihlalkwt.com</a>
+  </div>
+</footer>
