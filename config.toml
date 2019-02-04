@@ -14,16 +14,16 @@ summaryLength = 10
     pre = "home"
     url = "/"
     weight = 1
-  [[menu.main]]
-    name = "القمر في العقرب"
-    pre = "moon"
-    url = "/about/under-construction/"
-    weight = 2
-  [[menu.main]]
-    name = "ألبوم الصور"
-    pre = "camera"
-    url = "/about/under-construction/"
-    weight = 3
+  # [[menu.main]]
+  #   name = "القمر في العقرب"
+  #   pre = "moon"
+  #   url = "/about/under-construction/"
+  #   weight = 2
+  # [[menu.main]]
+  #   name = "ألبوم الصور"
+  #   pre = "camera"
+  #   url = "/about/under-construction/"
+  #   weight = 3
   [[menu.main]]
     name = "كيفية الرصد"
     pre = "eye"
@@ -41,5 +41,5 @@ summaryLength = 10
 
 [params]
   dateFormat = "Jan 2, 2006"
-  homeText = "لجنة غير نفعية معنية بالتثبت من الاستهلال والمواقيت الشرعية"
+  homeText = "لجنة غير نفعية معنية بالاستهلال والمواقيت الشرعية"
   donate = "اللجنة تطوعية بالكامل وبحاجة الى دعمكم للإستمرار بتوفير خدماتها مجانا."

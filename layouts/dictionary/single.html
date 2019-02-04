@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <h1>{{ .Title }} ({{ .Params.englishTerm }})</h1>
-{{ partial "date-and-tags.html" . }}<br /><br />
+<br />
 {{ .Content }}
 {{ $src := print "/dictionary/" .Params.image }}
 <img src="{{ $src }}" alt="صورة مفقودة">

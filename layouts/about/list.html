@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+<p>{{ .Content }}</p>
+{{ range.Pages.ByPublishDate.Reverse }}
+<p>
+  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> <br />
+  {{ partial "date-and-tags.html" . }}
+</p>
+{{ end }}
+
+<br><br><br>
+<a href="/" class="btn btn-sm btn-block">عودة الى الصفحة الرئيسية</a>
+{{ end }}
