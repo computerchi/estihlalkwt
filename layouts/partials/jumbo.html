@@ -1,11 +1,11 @@
 <div id="home-jumbotron" class="jumbotron jumbotron-fluid">
     <div class="container">
         <div class="row">
-            <div class="logo col-md-3">
+            <div class="logo col-sm-2">
                 {{ $imgUrl := "../img/logo1010.png" | absURL }}
                 <img src={{ $imgUrl }} alt="Logo">
             </div>
-            <div class="title col-md">
+            <div class="title col-sm">
                 <h1>{{ .Site.Title }}</h1>
                 <p class="font-125" style="color: #333;">{{ .Site.Params.homeText | markdownify }}</p>
             </div>
