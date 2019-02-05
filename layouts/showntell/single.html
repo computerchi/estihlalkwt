@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+<br />
+<div class="container">
+  {{ $src := print "/showntell/" .Params.image }}
+  <img src="{{ $src }}" alt="صورة مفقودة" />
+</div>
+
+<br />
+<div class="container">
+  {{ .Content }}
+</div>
+
+<br /><br /><br />
+<a href="/" class="btn btn-sm btn-block">عودة الى الصفحة الرئيسية</a>
+
+{{ end }}

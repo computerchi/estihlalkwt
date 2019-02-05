@@ -2,12 +2,15 @@
 
 <h1>{{ .Title }}</h1>
 <p>{{ .Content }}</p>
-{{ range.Pages.ByPublishDate.Reverse }}
-<p>
-  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> <br />
-</p>
-{{ end }}
+<div class="container">
+      {{ range.Pages.ByPublishDate.Reverse }}
+  <p class="font-125">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Params.englishTerm | markdownify }}
+  </p>
+  {{ end }}
+</div>
 
-<br><br><br>
+<br /><br /><br />
 <a href="/" class="btn btn-sm btn-block">عودة الى الصفحة الرئيسية</a>
+
 {{ end }}

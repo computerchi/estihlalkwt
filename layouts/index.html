@@ -4,78 +4,101 @@
   <div class="row">
     <div class="col-md-9">
       <!-- ads -->
-      {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
-      {{ if eq .Type "ads" }}
-      <div class="alert alert-warning" role="alert">
-        <h2>إعلان</h2>
-        <a href="{{ .Permalink }}">
-          <b>{{ .Title }}</b> - {{ partial "date-only.html" . }}
-        </a>
-        <p>{{ .Content }}</p>
+      <div>
+        {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
+        {{ if eq .Type "ads" }}
+        <div class="alert alert-warning" role="alert">
+          <h2>إعلان</h2>
+          <hr>
+          <a href="{{ .Permalink }}">
+            <h4>{{ .Title }}</h4>
+          </a>
+          {{ partial "date-only.html" . }}
+          <p>{{ .Content }}</p>
+        </div>
+        {{ end }}
+        {{ end }}
       </div>
-      {{ end }}
-      {{ end }}
 
       <!-- show and tell -->
+      <div class="card">
+        {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
+        {{ if eq .Type "showntell" }}
+        {{ $src := print "/showntell/" .Params.image }}
+        <img class="card-img-top" src="{{ $src }}" alt="Card image cap">
+        <div class="card-body">
+            <a href="{{ .Permalink }}">
+                <h5 class="card-title">{{ .Title }}</h5>
+                </a>
+            <p class="card-text">{{ .Content }}</p>
+        </div>
 
+        {{ end }}
+        {{ end }}
+      </div>
+      <br>
 
       <!-- news -->
-      <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">أخبار</h3>
-      {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
-      {{ if eq .Type "news" }}
-      <article class="container">
-        <h4>
-          <a href="{{ .Permalink }}">
-            {{ .Title }}
-          </a>
-        </h4>
-        <div class="row">
-          <div class="col-md-3">
-            <b> {{ partial "date-only.html" . }}</b>
-          </div>
-          <div class="col-md-9">
-            {{ .Summary }}
+      <div>
+        <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">أخبار</h3>
+        {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
+        {{ if eq .Type "news" }}
+        <article class="container">
+          <h4>
             <a href="{{ .Permalink }}">
-              إقرأ الخبر كاملاً
+              {{ .Title }}
             </a>
+          </h4>
+          <div class="row">
+            <div class="col-md-3">
+              {{ partial "date-only.html" . }}
+            </div>
+            <div class="col-md-9">
+              {{ .Summary }}
+              <a href="{{ .Permalink }}">
+                إقرأ الخبر كاملاً
+              </a>
+            </div>
           </div>
-        </div>
+          <br />
+        </article>
+        {{ end }}
+        {{ end }}
         <br />
-      </article>
-      {{ end }}
-      {{ end }}
-    
-      <br />
+      </div>
 
       <!-- articles -->
-      <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">مقالات</h3>
-      {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
-      {{ if eq .Type "articles" }}
-      <article class="container">
-        <h4>
-          <a href="{{ .Permalink }}">
-            {{ .Title }}
-          </a>
-        </h4>
-        <div class="row">
-          <div class="col-md-3">
-            &nbsp; <b> {{ partial "date-only.html" . }}</b> <br />
-          </div>
-          <div class="col-md-9">
-            {{ .Summary }}
+      <div>
+        <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">مقالات</h3>
+        {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
+        {{ if eq .Type "articles" }}
+        <article class="container">
+          <h4>
             <a href="{{ .Permalink }}">
-              إقرأ المقال كاملاً
+              {{ .Title }}
             </a>
+          </h4>
+          <div class="row">
+            <div class="col-md-3">
+              &nbsp; {{ partial "date-only.html" . }} <br />
+              <div style="font-size: .9em">&nbsp;&nbsp;بقلم: {{ .Params.author }}</div>
+            </div>
+            <div class="col-md-9">
+              {{ .Summary }}
+              <a href="{{ .Permalink }}">
+                إقرأ المقال كاملاً
+              </a>
+            </div>
           </div>
-        </div>
-        </div>
-        <br />
-      </article>
-      {{ end }}
-      {{ end }}
+          <br />
+        </article>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
 
-      <!-- side buttons -->
-    <div class="col-md-3">
+    <!-- side buttons -->
+    <aside class="col-md-3">
       <div class="container container-fluid">
         <a href="/newsletter/" class="btn btn-sm btn-block">النشرة الشهرية</a>
         <a href="/news/" class="btn btn-sm btn-block">الأخبار</a>
@@ -89,20 +112,25 @@
         <a href="/dictionary/" class="btn btn-sm btn-block">القاموس الفلكي</a>
       </div>
       <hr />
+    
       <!-- counts -->
-      <p class="font-125">
-        {{ len (where .Site.RegularPages "Section" "==" "articles") }}
-        مقالاً
-      </p>
+      <div class="container">
+        <p class="font-125">
+          {{ len (where .Site.RegularPages "Section" "==" "articles") }}
+          مقالاً
+        </p>
+      </div>
       <hr />
-
+    
       <!-- tages -->
-      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-      {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-      <a class="tags btn btn-outline-secondary btn-sm" href="{{ .Permalink }}">{{ $name }}</a>
-      {{ end }}
-      {{ end }}
-    </div>
+      <div class="container">
+        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+        <a class="tags btn btn-outline-secondary btn-sm" href="{{ .Permalink }}">{{ $name }}</a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </aside>
   </div>
 </div>
 
