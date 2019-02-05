@@ -2,6 +2,7 @@ baseURL = "https://estihlalkwt.com/"
 languageCode = "en-us"
 title = "اللجنة الكويتية المشتركة للإستهلال"
 summaryLength = 10
+preserveTaxonomyNames = true
 
 [permalinks]
   blog = "/:filename"

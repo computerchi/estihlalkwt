@@ -1,5 +1,5 @@
 ---
-title: "New Begining"
+title: "بداية جديدة"
 date: 2019-02-04T18:48:58+03:00
 tags: []
 draft: false
