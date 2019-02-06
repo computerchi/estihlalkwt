@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<h1></h1>
+<p>{{ .Content }}</p>
+<div class="container">
+{{ range.Pages.ByPublishDate.Reverse }}
+
+<div class="card" style="width: 18rem;">
+  {{ $src := print "/books/" .Params.thumbnail }} 
+  <img class="card-img-top" src={{ $src }} alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ .Title }}</h5>
+    <div class="container">
+      <div class="row">
+        <div class="col-md">المؤلف</div>
+        <div class="col-md"><p class="card-text">{{ .Params.author }}</p></div>
+      </div>
+      <div class="row">
+          <div class="col-md">سنة النشر</div>
+        <div class="col-md"><p class="card-text">{{ .Params.yearPublished }}</p></div>
+      </div>
+      <div class="row">
+        <div class="col-md">الناشر</div>
+        <div class="col-md"><p class="card-text">{{ .Params.publisher }}</p></div>
+      </div>
+      <div class="row">
+        <div class="col-md">عدد الصفحات</div>
+        <div class="col-md"><p class="card-text">{{ .Params.pageCount }}</p></div>
+      </div>
+    </div>    
+    <br> <a href="/books/{{ .Params.file }}" class="btn btn-primary">تنزيل الكتاب</a>
+  </div>
+</div>
+
+{{ end }}
+</div>
+
+<br><br><br>
+<a href="/" class="btn btn-sm btn-block">عودة الى الصفحة الرئيسية</a>
+
+{{ end }}
+
+

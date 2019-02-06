@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://estihlalkwt.com/books/%D8%AF%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%87%D9%84%D8%A7%D9%84/</loc>
+    <lastmod>2019-02-06T12:13:24+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://estihlalkwt.com/news/saegh-jumada2/</loc>
     <lastmod>2019-02-06T01:28:13+03:00</lastmod>
   </url>
@@ -63,6 +68,12 @@
   </url>
   
   <url>
+    <loc>https://estihlalkwt.com/books/</loc>
+    <lastmod>2019-02-06T12:13:24+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://estihlalkwt.com/tags/</loc>
     <priority>0</priority>
   </url>
@@ -101,7 +112,7 @@
   
   <url>
     <loc>https://estihlalkwt.com/</loc>
-    <lastmod>2019-02-06T01:28:13+03:00</lastmod>
+    <lastmod>2019-02-06T12:13:24+03:00</lastmod>
     <priority>0</priority>
   </url>
   
