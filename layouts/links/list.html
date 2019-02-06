@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<div class="container">
+{{ range.Pages.ByPublishDate.Reverse }}
+<h6>
+  <a class="font-125" href="{{ .Params.link }}">{{ .Title }}</a> <br />
+</p>
+{{ end }}
+</div>
+
+<br><br><br>
+<a href="/" class="btn btn-sm btn-block">عودة الى الصفحة الرئيسية</a>
+
+{{ end }}

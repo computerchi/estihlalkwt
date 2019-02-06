@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+<div class="font-125">بقلم: {{ .Params.author }}</div>
+{{ partial "date-and-tags.html" . }}<br /><br />
+{{ .Content }}
+
+<br><br><br>
+<a href="/" class="btn btn-sm btn-block">عودة الى الصفحة الرئيسية</a>
+{{ end }}
