@@ -21,9 +21,13 @@
       </div>
 
       <!-- show and tell -->
+
+      {{ $list := (where .Site.Pages "Section" "showntell") }}
+      {{ $len := (len $list) }}
+
       <div class="card">
-        {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
-        {{ if eq .Type "showntell" }}
+        {{ range $index, $element := $list }}
+        {{ if eq $index 1 }}
         {{ $src := print "/showntell/" .Params.image }}
         <img class="card-img-top" src="{{ $src }}" alt="Card image cap">
         <div class="card-body">

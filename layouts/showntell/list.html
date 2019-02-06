@@ -3,7 +3,7 @@
 <h1>{{ .Title }}</h1>
 <p>{{ .Content }}</p>
 {{ range.Pages.ByPublishDate.Reverse }}
-<a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Content | markdownify }}
+<a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Content | markdownify }} <br>
 {{ end }}
 
 <br><br><br>
