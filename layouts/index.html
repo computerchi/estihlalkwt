@@ -27,7 +27,7 @@
 
       <div class="card">
         {{ range $index, $element := $list }}
-        {{ if eq (add $index 1) $len }}
+        {{ if eq $index 1 }}
         {{ $src := print "/showntell/" .Params.image }}
         <img class="card-img-top" src="{{ $src }}" alt="Card image cap">
         <div class="card-body">
