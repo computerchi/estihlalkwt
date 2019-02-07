@@ -5,8 +5,9 @@
     <div class="col-md-9">
       <!-- ads -->
       <div>
-        {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
-        {{ if eq .Type "ads" }}
+        {{ range (where .Site.Pages.ByPublishDate.Reverse "Section" "ads") }}
+        {{ $today := now.Format "2006-01-02" }}
+        {{ if and (le $today .Params.adExpiryDate) ( eq .Kind "page") }}
         <div class="alert alert-warning" role="alert">
           <h2>إعلان</h2>
           <hr>
@@ -21,12 +22,7 @@
       </div>
 
       <!-- show and tell -->
-
-      {{ $list := (where .Site.Pages "Section" "showntell") }}
-      {{ $len := (len $list) }}
-
       <div class="card">
-
         {{ range first 1 (where .Site.Pages.ByPublishDate.Reverse "Section" "showntell")  }}
         {{ $src := print "/showntell/" .Params.image }}
         <img class="card-img-top" src="{{ $src }}" alt="Card image cap">
@@ -44,8 +40,8 @@
       <!-- news -->
       <div>
         <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">أخبار</h3>
-        {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
-        {{ if eq .Type "news" }}
+        {{ range first 10 (where .Site.Pages.ByPublishDate.Reverse "Section" "news") }}
+        {{ if eq .Kind "page" }}
         <article class="container">
           <h4>
             <a href="{{ .Permalink }}">
@@ -73,8 +69,8 @@
       <!-- articles -->
       <div>
         <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">مقالات</h3>
-        {{ range first 10 .Data.Pages.ByPublishDate.Reverse }}
-        {{ if eq .Type "articles" }}
+        {{ range first 3 (where .Site.Pages.ByPublishDate.Reverse "Section" "articles") }}
+        {{ if eq .Kind "page" }}
         <article class="container">
           <h4>
             <a href="{{ .Permalink }}">
