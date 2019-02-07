@@ -1,0 +1,13 @@
+<div class="card">
+    {{ range first 1 (where .Site.Pages.ByPublishDate.Reverse "Section" "showntell")  }}
+    {{ $src := print "/showntell/" .Params.image }}
+    <img class="card-img-top" src="{{ $src }}" alt="Card image cap">
+    <div class="card-body">
+        <a href="{{ .Permalink }}">
+            <h5 class="card-title">{{ .Title }}</h5>
+            </a>
+        <p class="card-text">{{ .Content }}</p>
+    </div>
+
+    {{ end }}
+  </div>

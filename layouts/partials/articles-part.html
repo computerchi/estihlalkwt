@@ -1,0 +1,27 @@
+<div>
+    <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">مقالات</h3>
+    {{ range first 3 (where .Site.Pages.ByPublishDate.Reverse "Section" "articles") }}
+    {{ if eq .Kind "page" }}
+    <article class="container">
+      <h4>
+        <a href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+      </h4>
+      <div class="row">
+        <div class="col-md-3">
+          &nbsp; {{ partial "date-only.html" . }} <br />
+          <div style="font-size: .9em">&nbsp;&nbsp;بقلم: {{ .Params.author }}</div>
+        </div>
+        <div class="col-md-9">
+          {{ .Summary }}
+          <a href="{{ .Permalink }}">
+            إقرأ المقال كاملاً
+          </a>
+        </div>
+      </div>
+      <br />
+    </article>
+    {{ end }}
+    {{ end }}
+  </div>

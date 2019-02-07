@@ -4,113 +4,21 @@
   <div class="row">
     <div class="col-md-9">
       <!-- ads -->
-      <div>
-        {{ range (where .Site.Pages.ByPublishDate.Reverse "Section" "ads") }}
-        {{ $today := now.Format "2006-01-02" }}
-        {{ if and (le $today .Params.adExpiryDate) ( eq .Kind "page") }}
-        <div class="alert alert-warning" role="alert">
-          <h2>إعلان</h2>
-          <hr>
-          <a href="{{ .Permalink }}">
-            <h4>{{ .Title }}</h4>
-          </a>
-          {{ partial "date-only.html" . }}
-          <p>{{ .Content }}</p>
-        </div>
-        {{ end }}
-        {{ end }}
-      </div>
+      {{ partial "ads-part.html" . }}
 
       <!-- show and tell -->
-      <div class="card">
-        {{ range first 1 (where .Site.Pages.ByPublishDate.Reverse "Section" "showntell")  }}
-        {{ $src := print "/showntell/" .Params.image }}
-        <img class="card-img-top" src="{{ $src }}" alt="Card image cap">
-        <div class="card-body">
-            <a href="{{ .Permalink }}">
-                <h5 class="card-title">{{ .Title }}</h5>
-                </a>
-            <p class="card-text">{{ .Content }}</p>
-        </div>
-
-        {{ end }}
-      </div>
+      {{ partial "showntell-part.html" . }}
       <br>
 
       <!-- news -->
-      <div>
-        <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">أخبار</h3>
-        {{ range first 10 (where .Site.Pages.ByPublishDate.Reverse "Section" "news") }}
-        {{ if eq .Kind "page" }}
-        <article class="container">
-          <h4>
-            <a href="{{ .Permalink }}">
-              {{ .Title }}
-            </a>
-          </h4>
-          <div class="row">
-            <div class="col-md-3">
-              {{ partial "date-only.html" . }}
-            </div>
-            <div class="col-md-9">
-              {{ .Summary }}
-              <a href="{{ .Permalink }}">
-                إقرأ الخبر كاملاً
-              </a>
-            </div>
-          </div>
-          <br />
-        </article>
-        {{ end }}
-        {{ end }}
-        <br />
-      </div>
+      {{ partial "news-part.html" . }}
 
       <!-- articles -->
-      <div>
-        <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">مقالات</h3>
-        {{ range first 3 (where .Site.Pages.ByPublishDate.Reverse "Section" "articles") }}
-        {{ if eq .Kind "page" }}
-        <article class="container">
-          <h4>
-            <a href="{{ .Permalink }}">
-              {{ .Title }}
-            </a>
-          </h4>
-          <div class="row">
-            <div class="col-md-3">
-              &nbsp; {{ partial "date-only.html" . }} <br />
-              <div style="font-size: .9em">&nbsp;&nbsp;بقلم: {{ .Params.author }}</div>
-            </div>
-            <div class="col-md-9">
-              {{ .Summary }}
-              <a href="{{ .Permalink }}">
-                إقرأ المقال كاملاً
-              </a>
-            </div>
-          </div>
-          <br />
-        </article>
-        {{ end }}
-        {{ end }}
-      </div>
+      {{ partial "articles-part.html" . }}
     </div>
 
     <!-- side buttons -->
-    <aside class="col-md-3">
-      <div class="container container-fluid">
-        <a href="/newsletter/" class="btn btn-sm btn-block">النشرة الشهرية</a>
-        <a href="/news/" class="btn btn-sm btn-block">الأخبار</a>
-        <a href="/ads/" class="btn btn-sm btn-block">الإعلانات</a>
-        <a href="/events/" class="btn btn-sm btn-block">الظواهر الفلكية</a>
-        <a href="/observations/" class="btn btn-sm btn-block">تقارير الرصد</a>
-        <a href="/statements/" class="btn btn-sm btn-block">البيانات</a>
-        <a href="/showntell" class="btn btn-sm btn-block">صورة وتعليق</a>
-        <a href="/articles/" class="btn btn-sm btn-block">المقالات</a>
-        <a href="/links/" class="btn btn-sm btn-block">الروابط المهمة</a>
-        <a href="/books/" class="btn btn-sm btn-block">المكتبة</a>
-        <a href="/dictionary/" class="btn btn-sm btn-block">القاموس الفلكي</a>
-      </div>
+      {{ partial "side-buttons.html" . }}
       <hr />
     
       <!-- counts -->

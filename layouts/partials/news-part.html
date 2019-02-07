@@ -1,0 +1,27 @@
+<div>
+    <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">أخبار</h3>
+    {{ range first 10 (where .Site.Pages.ByPublishDate.Reverse "Section" "news") }}
+    {{ if eq .Kind "page" }}
+    <article class="container">
+      <h4>
+        <a href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+      </h4>
+      <div class="row">
+        <div class="col-md-3">
+          {{ partial "date-only.html" . }}
+        </div>
+        <div class="col-md-9">
+          {{ .Summary }}
+          <a href="{{ .Permalink }}">
+            إقرأ الخبر كاملاً
+          </a>
+        </div>
+      </div>
+      <br />
+    </article>
+    {{ end }}
+    {{ end }}
+    <br />
+  </div>

@@ -5,16 +5,6 @@
 {{ partial "date-and-tags.html" . }}<br /><br />
 {{ .Content }}
 
-<br><br><br>
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-            <a href="/" class="btn btn-sm btn-block">عودة الى الصفحة الرئيسية</a>
-        </div>
-        <div class="col-sm">
-            <a href="/articles/" class="btn btn-sm btn-block">قائمة المقالات</a>
-        </div>
-    </div>
-</div>
+{{ partial "return-2-btn.html" (dict "label" "المقالات" "link" "articles") }}
 
 {{ end }}
