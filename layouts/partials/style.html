@@ -1,6 +1,6 @@
 <style>
   .container {
-    max-width: {{ .Site.Params.containerMaxWidth | default "900px"| safeCSS }};
+    max-width: {{ .Site.Params.containerMaxWidth | default "900px" | safeCSS }};
   }
 
   .jumbotron {
@@ -30,14 +30,14 @@
     padding: 10px;
   }
 
-.jumbo-logo {
-  width: 11em;
-}
+  .jumbo-logo {
+    width: 11em;
+  }
 
-.book-img-height {
-  height: 22rem;
-  width:auto;
-}
+  .book-img-height {
+    height: 22rem;
+    width: auto;
+  }
 
   .title {
     margin-top: 30px;
@@ -55,10 +55,12 @@
     max-width: 100%;
   }
 
-  body, .arabize {
+  body,
+  .arabize {
     direction: rtl;
     text-align: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
   }
 
   footer {
@@ -68,19 +70,20 @@
   }
 
   .social {
-      margin: 0;
-      padding: 0;
-      text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: #ccc;
+    text-decoration: none;
   }
 
   .social:enabled {
-      color: #ccc;
-      text-decoration: none;
-    }
+    color: #ccc;
+    text-decoration: none;
+  }
 
   .social:hover {
-      color: deepskyblue;
-      text-decoration: none;
+    color: deepskyblue;
+    text-decoration: none;
   }
 
   .btn {
@@ -112,12 +115,11 @@
     margin: 1px 0;
   }
 
-time {
-  font-size: .7em;
-}
+  time {
+    font-size: 0.7em;
+  }
 
-.return-btn {
-  margin: 5px 0;
-}
-
+  .return-btn {
+    margin: 5px 0;
+  }
 </style>
