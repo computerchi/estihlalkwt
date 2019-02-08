@@ -21,15 +21,6 @@
       {{ partial "side-buttons.html" . }}
       <hr />
     
-      <!-- counts -->
-      <div class="container">
-        <p class="font-125">
-          {{ len (where .Site.RegularPages "Section" "==" "articles") }}
-          مقالاً
-        </p>
-      </div>
-      <hr />
-    
       <!-- tages -->
       <div class="container">
         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}

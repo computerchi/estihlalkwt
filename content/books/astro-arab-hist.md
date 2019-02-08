@@ -6,7 +6,7 @@ yearPublished: 1993
 publisher: "مكتبة الدار العربية للكتاب"
 pageCount: 377
 thumbnail: "astro-arab-hist.jpg"
-file: astro-arab-hist.pdf""
+file: "astro-arab-hist.pdf"
 tags: []
 draft: false
 ---

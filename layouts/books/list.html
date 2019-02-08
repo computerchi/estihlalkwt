@@ -3,7 +3,7 @@
 {{ range.Pages.ByPublishDate.Reverse }}
 
 <div class="card-group">
-  <div class="card">
+  <div class="card ">
     <div class="card-body">
       <h5 class="card-title">{{ .Title }}</h5>
 
@@ -32,11 +32,11 @@
       <a href="/books/{{ .Params.file }}" class="btn btn-primary" style="padding: 0 10px;">الكتاب</a>
     </div>
   </div>
-  <div class="card">
-    {{ $src := print "/books/" .Params.thumbnail }}
-    <img class="card-img-top" src={{ $src }} alt="Card image cap" />
+
+  {{ $src := print "/books/" .Params.thumbnail }}
+    <img class="card-img-top book-img-height" src={{ $src }} alt="Card image cap" />
+
   </div>
-</div>
 <br>
 
 {{ end }}

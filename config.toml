@@ -1,6 +1,6 @@
 baseURL = "https://estihlalkwt.com/"
 languageCode = "en-us"
-title = "اللجنة الكويتية المشتركة للإستهلال"
+title = "اللجنة الكويتية المشتركة للاستهلال"
 summaryLength = 10
 preserveTaxonomyNames = true
 
@@ -42,5 +42,5 @@ preserveTaxonomyNames = true
 
 [params]
   dateFormat = "Jan 2, 2006"
-  homeText = "لجنة غير ربحية معنية بالإستهلال والمواقيت الشرعية"
-  donate = "اللجنة تطوعية بالكامل وبحاجة الى دعمكم للإستمرار بتوفير خدماتها مجانا."
+  homeText = "لجنة غير ربحية معنية بالاستهلال والمواقيت الشرعية"
+  donate = "اللجنة تطوعية بالكامل وبحاجة الى دعمكم للاستمرار بتوفير خدماتها."
