@@ -7,10 +7,10 @@
 </p>
 
 <ul>
-    <li>الليلة الأولى: (يوم {{ .Params.firstNight }} 7/11/2019)
-{{ .Params.firstNightVision }}</li>
-    <li>الليلة الثانية: (يوم {{ .Params.secondNight }} 7/11/2019)
-{{ .Params.secondNightVision }} <br>{{ .Params.secondNightVision }}   </li>
+    <li><b>الليلة الأولى: (يوم {{ .Params.firstNight }} {{ .Params.firstNightDate }})</b><br>
+{{ .Params.firstNightVision }}<br>{{ .Params.firstNightVision2 }}</li>
+    <li><b>الليلة الثانية: (يوم {{ .Params.secondNight }} {{ .Params.secondNightDate }})</b><br>
+{{ .Params.secondNightVision }} <br>{{ .Params.secondNightVision2 }}   </li>
 </ul>
 <br>
 <div class="alert alert-success" role="alert">
@@ -24,13 +24,13 @@
 <br>
 <div class="card-deck">
     <div class="card">
-        <img class="card-img-top" style="height: 24rem;" src="/crescents/{{.Name}}-mas-1.jpg" alt={{ $noImg }}>
+        <img class="card-img-top" style="height: 34rem;" src="/crescents/{{.Name}}-mas-1.jpg" alt={{ $noImg }}>
         <div class="card-footer">
             <h3 class="text-muted">في مدينة الكويت</h3>
         </div>
     </div>
     <div class="card">
-        <img class="card-img-top" style="height: 24rem;" src="/crescents/{{.Name}}-mas-2.jpg" alt={{ $noImg }}>
+        <img class="card-img-top" style="height: 34rem;" src="/crescents/{{.Name}}-mas-2.jpg" alt={{ $noImg }}>
         <div class="card-footer">
             <h3 class="text-muted">في مجموعة من مدن العالم</h3>
         </div>

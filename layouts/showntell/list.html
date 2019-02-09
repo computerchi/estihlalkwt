@@ -6,6 +6,5 @@
 <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Content | markdownify }} <br>
 {{ end }}
 
-<br><br><br>
-<a href="/" class="btn btn-sm btn-block">عودة الى الصفحة الرئيسية</a>
+{{ partial "return-1-btn" . }}
 {{ end }}
