@@ -15,11 +15,11 @@ preserveTaxonomyNames = true
     pre = "home"
     url = "/"
     weight = 1
-  # [[menu.main]]
-  #   name = "القمر في العقرب"
-  #   pre = "moon"
-  #   url = "/about/under-construction/"
-  #   weight = 2
+  [[menu.main]]
+    name = "رصد الاهلة"
+    pre = "moon"
+    url = "/crescents/"
+    weight = 2
   # [[menu.main]]
   #   name = "ألبوم الصور"
   #   pre = "camera"

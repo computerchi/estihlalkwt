@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<h1>رصد الأهلة</h1>
+<p>{{ .Content }}</p>
+<div class="container">
+{{ range.Pages.ByPublishDate.Reverse }}
+  <a class="font-125" href="{{ .RelPermalink }}">هلال شهر {{.Params.month}} {{.Params.yearHijry}} هجرية<br />
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+            <img src="../img/crescent.jpg" alt="" class="rounded thumbnail"></a>
+        </div>
+        <div class="col-sm">
+            <b> أوّل أيّام شهر {{.Params.month}} هو يوم {{ .Params.firstDay }} {{ .Params.firstDayDate }} (حسب الرؤية المحلية في دولة الكويت)</b>
+            <p>{{ partial "date-only.html" . }}</p>
+          </div>
+      </div>
+    </div>
+
+{{ end }}
+</div>
+
+<br><br><br>
+<a href="/" class="btn btn-sm btn-block">عودة الى الصفحة الرئيسية</a>
+
+{{ end }}

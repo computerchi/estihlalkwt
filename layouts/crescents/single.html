@@ -1,0 +1,84 @@
+{{ define "main" }}
+
+<h1>تفاصيل رصد هلال شهر {{ .Params.month }} لسنة {{ .Params.yearHijry }} هـ</h1>
+{{ partial "date-only.html" . }}<br /><br />
+
+<p>يولد الهلال (الاقتران المركزي) يوم {{ .Params.sightDay }} {{ .Params.sightDate }} الساعة {{ .Params.sightGMT }} بالتوقيت العالمي (الساعة {{ .Params.sightTime }} بتوقيت مكة المكرمة).
+</p>
+
+<ul>
+    <li>الليلة الأولى: (يوم {{ .Params.firstNight }} 7/11/2019)
+{{ .Params.firstNightVision }}</li>
+    <li>الليلة الثانية: (يوم {{ .Params.secondNight }} 7/11/2019)
+{{ .Params.secondNightVision }} <br>{{ .Params.secondNightVision }}   </li>
+</ul>
+<br>
+<div class="alert alert-success" role="alert">
+<b> أوّل أيّام شهر {{.Params.month}} هو يوم {{ .Params.firstDay }} {{ .Params.firstDayDate }} (حسب الرؤية المحلية في دولة الكويت)</b>
+</div>
+<br>
+
+{{ $noImg := "الصورة غير متوفرة" }}
+
+<h2>جداول إمكانية رؤية الهلال بحسب تقويم الصائغ</h2>
+<br>
+<div class="card-deck">
+    <div class="card">
+        <img class="card-img-top" style="height: 24rem;" src="/crescents/{{.Name}}-mas-1.jpg" alt={{ $noImg }}>
+        <div class="card-footer">
+            <h3 class="text-muted">في مدينة الكويت</h3>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" style="height: 24rem;" src="/crescents/{{.Name}}-mas-2.jpg" alt={{ $noImg }}>
+        <div class="card-footer">
+            <h3 class="text-muted">في مجموعة من مدن العالم</h3>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<h2>خرائط إمكانية رؤية الهلال بحسب المعايير الفلكية</h2>
+<br>
+
+<div class="card-deck">
+    <div class="card">
+        <a href="{{ .Params.odahHTML }}">
+            <img class="card-img-top" style="height: 10rem;" src="{{ .Params.odahImg }}" alt={{ $noImg }}>
+            <div class="card-footer">
+                <h3 class="text-muted">معيار محمد عودة</h3>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="{{ .Params.yallopHTML }}">
+            <img class="card-img-top" style="height: 10rem;" src="{{ .Params.yallopImg }}" alt={{ $noImg }}>
+            <div class="card-footer">
+                <h3 class="text-muted">معيار يالوب</h3>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="{{ .Params.shawkatHTML }}">
+            <img class="card-img-top" style="height: 10rem;" src="{{ .Params.shawkatImg }}" alt={{ $noImg }}>
+            <div class="card-footer">
+                <h3 class="text-muted">معيار خالد شوكت</h3>
+            </div>
+        </a>
+    </div>
+</div>
+
+<br><br>
+<div class="alert alert-warning" role="alert">
+    <h4>ملاحظة هامة</h4>
+    <p>اللجنة غير معنية بإعلان بدايات الأشهر القمرية من الناحية الشرعية، كأن تعلن بداية شهر رمضان أو يوم عيد الفطر
+        مثلاً، بل هي معنية بتوضيح زمن ولادة الهلال، وإمكانية الرؤية في أفق الكويت وأماكن أخرى من العالم، بناء على
+        الحسابات الفلكية والخصائص المتعلقة بالهلال من حيث الارتفاع والمكث وغيرها من العناصر، وكذلك ظروف الرؤية كنقاء
+        الأفق وصفاء السماء من الغيوم أو التلوث الضوئي.</p>
+</div>
+
+
+
+{{ partial "return-2-btn.html" (dict "label" "رصد الاهلة" "link" "crescents") }}
+
+{{ end }}

@@ -1,7 +1,8 @@
 {{ define "main" }}
 
+<h1>روابط علمية</h1>
 <div class="container">
-{{ range.Pages.ByPublishDate.Reverse }}
+{{ range sort .Pages ".Weight" }}
 <h6>
   <a class="font-125" href="{{ .Params.link }}">{{ .Title }}</a> <br />
 </p>
