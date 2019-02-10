@@ -8,5 +8,12 @@
   {{ $css := "css/styles.css" | absURL }}
   <link rel="stylesheet" href="{{ $css }}" />
   <title>{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.homeText }}">
+  <meta property="og:title" content="{{ .Site.Title }}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content=" ..."/>
+  <meta property="og:url" content="https://estihlalkwt.com/"/>
+  <meta property="og:site_name" content="{{ .Site.Title }}"/>
+  <meta property="og:image" content="/img/logo1010.png">
   {{ partial "style.html" . }}
 </head>
