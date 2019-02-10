@@ -6,10 +6,6 @@
       <!-- ads -->
       {{ partial "ads-part.html" . }}
 
-      <!-- show and tell -->
-      {{ partial "showntell-part.html" . }}
-      <br>
-
       <!-- news -->
       {{ partial "news-part.html" . }}
 
@@ -17,7 +13,9 @@
       {{ partial "articles-part.html" . }}
     </div>
 
-    <!-- side buttons -->
+    <aside class="col-md-3">
+    
+      <!-- side buttons -->
       {{ partial "side-buttons.html" . }}
       <hr />
     
@@ -29,6 +27,12 @@
         {{ end }}
         {{ end }}
       </div>
+      <hr />
+    
+      <!-- show and tell -->
+      {{ partial "showntell-part.html" . }}
+      <br>
+    
     </aside>
   </div>
 </div>

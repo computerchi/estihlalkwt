@@ -1,7 +1,10 @@
+<h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">صورة وتعليق</h3>
 <div class="card">
     {{ range first 1 (where .Site.Pages.ByPublishDate.Reverse "Section" "showntell")  }}
     {{ $src := print "/showntell/" .Params.image }}
-    <img class="card-img-top" src="{{ $src }}" alt="Card image cap">
+    <a href="{{ .Permalink }}">
+        <img class="card-img-top" src="{{ $src }}" alt="Card image cap">
+    </a>
     <div class="card-body">
         <a href="{{ .Permalink }}">
             <h5 class="card-title">{{ .Title }}</h5>
