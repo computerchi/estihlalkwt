@@ -43,8 +43,8 @@
   }
 
   #main {
-    margin-top: 1em;
-    margin-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 2em;
   }
 
   #home-jumbotron {
@@ -115,7 +115,9 @@
   .btn-block {
     background-color: #e3ebf0;
     font-size: 1em;
-  }
+    background-color: inherit;
+    color:#333;
+}
 
   .nav-link:hover {
     background-color: #e3ebf0;
@@ -128,10 +130,13 @@
   }
 
   .section-header {
-    background-color: #e3ebf0;
+    background-color: #f8f9fa;
     padding: 0 4px 0 4px;
+    border: lightsalmon;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
   }
-
+  
   .tags {
     padding: 0 4px;
     margin: 1px 0;
@@ -158,6 +163,11 @@
     padding-right: 5px;
     padding-bottom: 2px;
   }
+  aside {
+    background-color:#f8f9fa;
+    padding-top: 10px;
+  }
+
 </style>
 
 </head>
@@ -207,40 +217,37 @@
     <div class="col-md-9">
       
       <div>
-    
-    
-    
-    <div class="alert alert-warning" role="alert">
-      <h2>إعلان</h2>
-      <hr>
+  
+  
+  
+  <div class="card border-secondary">
+    <div class="card-header">
+      <h2> إعلان</h2>
+    </div>
+    <div class="card-body">
       <a href="https://estihlalkwt.com/ads/%D8%AF%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D8%AE%D8%B3%D9%88%D9%81-%D9%88%D8%A7%D9%84%D9%83%D8%B3%D9%88%D9%81/">
-        <h4>دورة الخسوف والكسوف (مثال)</h4>
+        <h4 class="card-title">دورة الخسوف والكسوف (مثال)</h4>
       </a>
-      
-
-
-<time datetime="2019-02-04">Feb 4, 2019</time>
-
-
-      <p><p>تعلن اللجنة الكويتية المشتركة للاستهلال عن رغبتها في أقامة دورة تثقيفية عن بلا بلا بلا.</p>
+      <p class="card-text"><p>تعلن اللجنة الكويتية المشتركة للاستهلال عن رغبتها في أقامة دورة تثقيفية عن بلا بلا بلا.</p>
 
 <p>هذا مثال عن دورة</p>
 
 <p>رسوم الدورة 5 دنانير كويتية.</p>
 </p>
     </div>
-    
-    
-    
-    
-    
-    
   </div>
+  
+  
+  
+  
+  
+  <br>
+</div>
 
 
       
       <div>
-    <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">أخبار</h3>
+    <h3 class="section-header">أخبار</h3>
     
     
     <article class="container">
@@ -383,7 +390,7 @@
 
       
       <div>
-    <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">مقالات</h3>
+    <h3 class="section-header">مقالات</h3>
     
     
     <article class="container">
@@ -502,7 +509,7 @@
       <hr />
     
       
-      <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">صورة وتعليق</h3>
+      <h3 class="section-header">صورة وتعليق</h3>
 <div class="card">
     
     

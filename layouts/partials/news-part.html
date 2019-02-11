@@ -1,5 +1,5 @@
 <div>
-    <h3 style="background-color: #e3ebf0; padding: 0 4px 0 4px;">أخبار</h3>
+    <h3 class="section-header">أخبار</h3>
     {{ range first 5 (where .Site.Pages.ByPublishDate.Reverse "Section" "news") }}
     {{ if eq .Kind "page" }}
     <article class="container">

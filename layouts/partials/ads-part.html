@@ -1,17 +1,19 @@
 <div>
-    {{ range (where .Site.Pages.ByPublishDate.Reverse "Section" "ads") }}
-    {{ $today := now.Format "2006-01-02" }}
-    {{ if and (le $today .Params.adExpiryDate) ( eq .Kind "page") }}
-    <div class="alert alert-warning" role="alert">
-      <h2>إعلان</h2>
-      <hr>
-      <a href="{{ .Permalink }}">
-        <h4>{{ .Title }}</h4>
-      </a>
-      {{ partial "date-only.html" . }}
-      <p>{{ .Content }}</p>
+  {{ range (where .Site.Pages.ByPublishDate.Reverse "Section" "ads") }}
+  {{ $today := now.Format "2006-01-02" }}
+  {{ if and (le $today .Params.adExpiryDate) ( eq .Kind "page") }}
+  <div class="card border-secondary">
+    <div class="card-header">
+      <h2> إعلان</h2>
     </div>
-    {{ end }}
-    {{ end }}
-    
+    <div class="card-body">
+      <a href="{{ .Permalink }}">
+        <h4 class="card-title">{{ .Title }}</h4>
+      </a>
+      <p class="card-text">{{ .Content }}</p>
+    </div>
   </div>
+  {{ end }}
+  {{ end }}
+  <br>
+</div>
