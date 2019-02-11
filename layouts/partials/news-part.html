@@ -1,27 +1,27 @@
 <div>
-    <h3 class="section-header">أخبار</h3>
-    {{ range first 5 (where .Site.Pages.ByPublishDate.Reverse "Section" "news") }}
-    {{ if eq .Kind "page" }}
-    <article class="container">
-      <h4>
-        <a href="{{ .Permalink }}">
-          {{ .Title }}
-        </a>
-      </h4>
-      <div class="row">
-        <div class="col-md-3">
-          {{ partial "date-only.html" . }}
-        </div>
-        <div class="col-md-9">
-          <span class="myFontSize">{{ .Summary }}</span>
-          <a href="{{ .Permalink }}">
-            إقرأ الخبر كاملاً
-          </a>
-        </div>
+  <h3 class="section-header">أخبار</h3>
+  {{ range first 5 (where .Site.Pages.ByPublishDate.Reverse "Section" "news") }}
+  {{ if eq .Kind "page" }}
+  <article class="container">
+    <h4>
+      <a href="{{ .Permalink }}">
+        {{ .Title }}
+      </a>
+    </h4>
+    <div class="row">
+      <div class="col-md-3">
+        {{ partial "date-only.html" . }}
       </div>
-      <br />
-    </article>
-    {{ end }}
-    {{ end }}
+      <div class="col-md-9">
+        <span class="myFontSize">{{ .Summary }}</span>
+        <a href="{{ .Permalink }}">
+          إقرأ الخبر كاملاً
+        </a>
+      </div>
+    </div>
     <br />
-  </div>
+  </article>
+  {{ end }}
+  {{ end }}
+  <br />
+</div>

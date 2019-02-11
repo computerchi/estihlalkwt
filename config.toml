@@ -25,11 +25,11 @@ preserveTaxonomyNames = true
   #   pre = "camera"
   #   url = "/about/under-construction/"
   #   weight = 3
-  [[menu.main]]
-    name = "كيفية الرصد"
-    pre = "eye"
-    url = "/about/observation/"
-    weight = 4
+  # [[menu.main]]
+  #   name = "كيفية الرصد"
+  #   pre = "eye"
+  #   url = "/about/observation/"
+  #   weight = 4
   [[menu.main]]
     name = "من نحن"
     pre = "users"
