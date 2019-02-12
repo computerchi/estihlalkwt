@@ -6,10 +6,18 @@
 </div>
 <div class="container">
 {{ range.Pages.ByPublishDate.Reverse }}
-<p>
-  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> - بقلم: {{ .Params.author | markdownify }} <br />
-  {{ partial "date-and-tags.html" . }}
-</p>
+
+<div class="row">
+    <div class="col-sm">
+      <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+      بقلم: {{ .Params.author | markdownify }} 
+    </div>
+    <div class="col-sm">
+      {{ partial "date-and-tags.html" . }}
+    </div>
+  </div>
+  <hr>
+
 {{ end }}
 </div>
 

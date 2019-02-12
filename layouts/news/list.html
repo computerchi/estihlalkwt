@@ -3,12 +3,17 @@
 <h1 class="section-header">{{ .Title }}</h1>
 <p>{{ .Content }}</p>
 <div class="container">
-{{ range.Pages.ByPublishDate.Reverse }}
-<p>
-  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a><br />
-  {{ partial "date-and-tags.html" . }}
-</p>
-{{ end }}
+  {{ range.Pages.ByPublishDate.Reverse }}
+  <div class="row">
+    <div class="col-sm">
+      <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </div>
+    <div class="col-sm">
+      {{ partial "date-and-tags.html" . }}
+    </div>
+  </div>
+  <hr>
+  {{ end }}
 </div>
 
 {{ partial "return-1-btn" . }}
