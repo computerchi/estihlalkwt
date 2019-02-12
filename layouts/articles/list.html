@@ -1,7 +1,9 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
-<p>{{ .Content }}</p>
+<h1 class="section-header">{{ .Title }}</h1>
+<div class="alert alert-warning" role="alert">
+  {{ .Content }}
+</div>
 <div class="container">
 {{ range.Pages.ByPublishDate.Reverse }}
 <p>

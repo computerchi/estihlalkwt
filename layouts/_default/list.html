@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
+<h1 class="section-header">{{ .Title }}</h1>
 <p>{{ .Content }}</p>
 {{ range.Pages.ByPublishDate.Reverse }}
 <p>

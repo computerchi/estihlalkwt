@@ -1,13 +1,25 @@
 {{ define "main" }}
 
-<h1>روابط علمية</h1>
+<h1 class="section-header">روابط علمية</h1>
+<div class="alert alert-primary" role="alert">
+  إضغط اسم الموقع للاطلاع عليه من خلال النافذة الجانبية أو إضغط <kbd style="background-color: lightsteelblue;">&nearrow;</kbd> للذهاب الى الموقع المطلوب.
+</div>
+<br>
 <div class="container">
-{{ range sort .Pages ".Weight" }}
-<h6>
-  <a class="font-125" href="{{ .Params.link }}">{{ .Title }}</a> <br />
-</p>
-{{ end }}
+  <div class="row">
+    <div class="col-sm-5">
+      {{ range sort .Pages ".Weight" }}
+      <a class="font-125" href="{{ .Params.link }}" ><kbd style="background-color: lightsteelblue;">&nearrow;</kbd></a>
+      <a class="font-125" href="{{ .Params.link }}" target="miniBrowser">{{ .Title }}</a> 
+        <br />
+      {{ end }}
+    </div>
+    <div class="col-sm" >
+      <iframe  name="miniBrowser" frameborder="1" style="width:100%; height:400;"></iframe>
+    </div>
+  </div>
 </div>
 
 {{ partial "return-1-btn" . }}
 {{ end }}
+
