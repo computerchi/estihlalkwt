@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<h1>تفاصيل رصد هلال شهر {{ .Params.month }} لسنة {{ .Params.yearHijry }} هـ</h1>
+<h1 class="section-header">تفاصيل رصد هلال شهر {{ .Params.month }} لسنة {{ .Params.yearHijry }} هـ</h1>
 {{ partial "date-only.html" . }}<br /><br />
 
 <p>يولد الهلال (الاقتران المركزي) يوم {{ .Params.sightDay }} {{ .Params.sightDate }} الساعة {{ .Params.sightGMT }} بالتوقيت العالمي (الساعة {{ .Params.sightTime }} بتوقيت مكة المكرمة).
