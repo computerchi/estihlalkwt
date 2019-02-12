@@ -2,9 +2,20 @@
 
 <h1>{{ .Title }}</h1>
 <p>{{ .Content }}</p>
-{{ range.Pages.ByPublishDate.Reverse }}
-<a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Content | markdownify }} <br>
-{{ end }}
-
+<div class="container">
+  {{ range.Pages.ByPublishDate.Reverse }}
+  <hr>
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="{{ .Params.image }}" class="thumbnail rounded" alt="">
+    </div>
+    <div class="col-sm">
+        <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> <br>
+        {{ .Content | markdownify }}
+    </div>
+  </div>
+  {{ end }}
+  <hr>
+</div>
 {{ partial "return-1-btn" . }}
 {{ end }}
