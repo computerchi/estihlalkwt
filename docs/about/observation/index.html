@@ -6,17 +6,19 @@
   <meta name="generator" content="Hugo 0.53" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" href="/img/favicon-192x192.png" sizes="192x192">
-  
-  <link rel="stylesheet" href="https://estihlalkwt.com/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
   
   <link rel="stylesheet" href="https://estihlalkwt.com/css/styles.css" />
   
   
   <title>اللجنة الكويتية المشتركة للاستهلال | كيفية الرصد الصحيح</title>
-  <meta name="description" content="لجنة غير ربحية معنية بالاستهلال والمواقيت الشرعية">
+  <meta name="description" content="لجنة تطوعية معنية بالاستهلال والمواقيت الشرعية">
   <meta property="og:title" content="اللجنة الكويتية المشتركة للاستهلال"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:description" content="لجنة غير ربحية معنية بالاستهلال والمواقيت الشرعية"/>
+  <meta property="og:description" content="لجنة تطوعية معنية بالاستهلال والمواقيت الشرعية"/>
   <meta property="og:url" content="https://estihlalkwt.com/"/>
   <meta property="og:site_name" content="اللجنة الكويتية المشتركة للاستهلال"/>
   <meta property="og:image" content="https://estihlalkwt.com/img/logo600.png">
@@ -28,8 +30,36 @@
     max-width: 900px;
   }
 
+
+  .jumbo-logo {
+    width: 11em;
+    padding: 0 5px ;
+  }
+
+  .jumbo-ar {
+    font-size: 1.8rem;
+    margin: 30px 0 10px 0;
+  }
+
+  .jumbo-en {
+    font-size: 1.4rem;
+    font-stretch: extra-condensed;
+    line-height: 1rem;
+  }
+
+  .jumbo-slogan {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1rem;
+  }
+
   .jumbotron {
     margin: 0;
+  }
+
+  #home-jumbotron {
+    background-color:#e3ebf0;
+    padding: 10px;
   }
 
   .jumbo-title {
@@ -53,22 +83,9 @@
     border-top-style: solid;
   }
 
-  #home-jumbotron {
-    background-color:#e3ebf0;
-    padding: 10px;
-  }
-
-  .jumbo-logo {
-    width: 11em;
-  }
-
   .book-img-size {
     height: 22rem;
     width: 15rem;
-  }
-
-  .title {
-    margin-top: 30px;
   }
 
   .font-125 {
@@ -117,7 +134,6 @@
   .btn {
     padding: 0px;
   }
-
   
   .btn-block {
     background-color: #e3ebf0;
@@ -186,6 +202,37 @@
      padding-bottom: 5px;
   }
 
+  div.absolute {
+    position: absolute;
+    top: 5px;
+  }
+
+
+  @media only screen and (max-width: 770px) {
+    .jumbo-logo {
+      width: 100px;
+    }
+
+    .jumbo-text {
+      width:80%; 
+      margin: -18px 50px 0 0;
+    }
+
+    .jumbo-ar {
+      font-size: .8rem;
+    }
+
+    .jumbo-en {
+      font-size: .6rem;
+      line-height: .1rem;
+    }
+
+    .jumbo-slogan {
+      font-size: 0.5rem;
+      line-height: 0px;
+    }
+  }
+
 </style>
 
 </head>
@@ -194,16 +241,14 @@
   <body>
     <div id="home-jumbotron" class="jumbotron jumbotron-fluid bottom-shadow">
     <div class="container">
-        <div class="row">
-            <div class="logo col-md-3">
-                
-                <img src=https://estihlalkwt.com/img/logo600.png class="jumbo-logo" alt="Logo">
-            </div>
-            <div class="title col-md text-center">
-                <h2><b>اللجنة الكويتية المشتركة للاستهلال</b></h2>
-                <h3><b style="font-stretch: extra-condensed;">KUWAIT JOINT COMMITTEE FOR CRESCENT SIGHTING</b></h3>
-                <p class="font-125" style="color: #333;">لجنة غير ربحية معنية بالاستهلال والمواقيت الشرعية</p>
-            </div>
+        <div class="absolute" style="width:20%;">
+            
+            <img src=https://estihlalkwt.com/img/logo600.png class="jumbo-logo" alt="Logo">
+        </div>
+        <div class="jumbo-text text-center">
+            <p class="jumbo-ar"><b>اللجنة الكويتية المشتركة للاستهلال</b></p>
+            <p class="jumbo-en"><b>KUWAIT JOINT COMMITTEE FOR CRESCENT SIGHTING</b></p>
+            <p class="jumbo-slogan">لجنة تطوعية معنية بالاستهلال والمواقيت الشرعية</p>
         </div>
     </div>
 </div>
