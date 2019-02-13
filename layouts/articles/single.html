@@ -2,8 +2,16 @@
 
 <h1 class="section-header">{{ .Title }}</h1>
 <div class="font-125">بقلم: {{ .Params.author }}</div>
-{{ partial "date-and-tags.html" . }}<br /><br />
-{{ .Content }}
+    {{ partial "date-and-tags.html" . }}<br /><br />
+    {{ .Content }}
+
+    {{ if len .Params.tags }}
+        <br /><br />
+        <h2 class="section-header">قد يهمّك أيضا</h2>
+        {{ partial "tags-only.html" . }}
+    {{ end }}
+</div>
+
 
 {{ partial "return-2-btn.html" (dict "label" "المقالات" "link" "articles") }}
 
