@@ -2,7 +2,9 @@
     <div class="container">
         <div class="absolute">
             {{ $imgUrl := "../img/logo600.png" | absURL }}
-            <img src={{ $imgUrl }} class="jumbo-logo" alt="Logo">
+            <a href="/">
+                <img src={{ $imgUrl }} class="jumbo-logo" alt="Logo">
+            </a>
         </div>
         <div class="jumbo-text text-center">
             <p class="jumbo-ar"><b>{{ .Site.Title }}</b></p>
