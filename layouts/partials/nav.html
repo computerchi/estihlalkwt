@@ -6,4 +6,25 @@
     <a class="nav-link" href="{{ .URL }}">{{ $text }}</a>
     {{ end }}
   </nav>
+  
+  <nav id="nav-mob" class="nav">
+    <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <i data-feather="menu"></i>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+          <div class="container container-fluid"><b>
+
+        {{ range .Site.Menus.main }}
+        {{ $icon := printf "<i data-feather=\"%s\"></i>" .Pre }}
+        {{ $text := print $icon " " .Name | safeHTML }}
+        <a class="btn btn-sm btn-block side-buttons" href="{{ .URL }}">{{ $text }}</a>
+        {{ end }}
+        </b></div>
+            <hr>
+        {{ partial "side-buttons.html" . }}
+      </div>
+    </div>
+  </nav>
 </div>

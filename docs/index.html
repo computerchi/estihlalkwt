@@ -220,6 +220,15 @@
     top: 5px;
   }
 
+  #nav-mob {
+    display:none;
+  }
+  #nav {
+    visibility:visible;
+  }
+  #desktop-side-buttons {
+    visibility:visible;
+  }
 
   @media only screen and (max-width: 770px) {
     .jumbo-logo {
@@ -243,6 +252,17 @@
     .jumbo-slogan {
       font-size: 0.5rem;
       line-height: 0px;
+    }
+
+    #nav-mob {
+      display: block;
+      visibility:visible;
+    }
+    #nav {
+      display:none;
+    }
+    #desktop-side-buttons {
+      display:none;
     }
   }
 
@@ -280,6 +300,49 @@
     
     <a class="nav-link" href="/about/us/"><i data-feather="users"></i> من نحن</a>
     
+  </nav>
+  
+  <nav id="nav-mob" class="nav">
+    <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <i data-feather="menu"></i>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+          <div class="container container-fluid"><b>
+
+        
+        
+        
+        <a class="btn btn-sm btn-block side-buttons" href="/"><i data-feather="home"></i> الصفحة الرئيسية</a>
+        
+        
+        
+        <a class="btn btn-sm btn-block side-buttons" href="/crescents/"><i data-feather="moon"></i> رصد الاهلة</a>
+        
+        
+        
+        <a class="btn btn-sm btn-block side-buttons" href="/about/us/"><i data-feather="users"></i> من نحن</a>
+        
+        </b></div>
+            <hr>
+        
+<div class="container container-fluid"><b>
+    
+    <a href="/news/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="mic"></i> الاخبار</a>
+    
+    <a href="/events/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="star"></i> الاحداث الفلكية</a>
+    <a href="/observations/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="edit-3"></i> تقارير الرصد</a>
+    <a href="/statements/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="volume-2"></i> بيانات اللجنة</a>
+    <a href="/showntell" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="camera"></i> صورة وتعليق</a>
+    <a href="/articles/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="feather"></i> المقالات</a>
+    <a href="/links/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="external-link"></i> الروابط العلمية</a>
+    <a href="/books/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="book-open"></i> المكتبة</a>
+    <a href="/dictionary/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="book"></i> القاموس الفلكي</a>
+  </b>
+</div>
+      </div>
+    </div>
   </nav>
 </div>
     <div class="container">
@@ -511,7 +574,8 @@
     <aside class="col-md-3">
     
       
-      
+      <div id="desktop-side-buttons">
+        
 <div class="container container-fluid"><b>
     
     <a href="/news/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="mic"></i> الاخبار</a>
@@ -526,7 +590,8 @@
     <a href="/dictionary/" class=btn&#32;btn-sm&#32;btn-block&#32;side-buttons><i data-feather="book"></i> القاموس الفلكي</a>
   </b>
 </div>
-      <hr />
+        <hr />
+      </div>
     
       
       <div class="container">
