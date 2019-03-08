@@ -5,8 +5,8 @@ author: ""
 yearPublished: 2000
 publisher: ""
 pageCount: 100
-thumbnail: ""
-file: ""
+thumbnail: "{{ .Name }}"
+file: "{{ .Name }}"
 tags: []
 draft: false
 ---
