@@ -1,9 +1,0 @@
-{{ define "main" }}
-
-<h1 class="section-header">{{ .Title }}</h1>
-{{ partial "date-and-tags.html" . }}<br /><br />
-{{ .Content }}
-
-{{ partial "return-2-btn.html" (dict "label" "البيانات" "link" "statements") }}
-
-{{ end }}
