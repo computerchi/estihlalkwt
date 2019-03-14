@@ -1,22 +1,14 @@
 {{ define "main" }}
 
-<h1 class="section-header">تفاصيل رصد هلال شهر {{ .Params.month }} لسنة {{ .Params.yearHijry }} هـ</h1>
-{{ partial "date-only.html" . }}<br /><br />
+<h1 class="section-header">تفاصيل رصد هلال شهر {{ .Params.hijryMonth }} لسنة {{ .Params.hijryYear }} هـ</h1>
+<br />
 
-<p>يولد الهلال (الاقتران المركزي) يوم {{ .Params.sightDay }} {{ .Params.sightDate }} الساعة {{ .Params.sightGMT }} بالتوقيت العالمي (الساعة {{ .Params.sightTime }} بتوقيت مكة المكرمة).
-</p>
-
-<ul>
-    <li><b>الليلة الأولى: (يوم {{ .Params.firstNight }} {{ .Params.firstNightDate }})</b><br>
-{{ .Params.firstNightVision }}<br>{{ .Params.firstNightVision2 }}</li>
-    <li><b>الليلة الثانية: (يوم {{ .Params.secondNight }} {{ .Params.secondNightDate }})</b><br>
-{{ .Params.secondNightVision }} <br>{{ .Params.secondNightVision2 }}   </li>
-</ul>
+{{ .Content }}
 <br>
 <div class="alert alert-success" role="alert">
-<b> أوّل أيّام شهر {{.Params.month}} هو يوم {{ .Params.firstDay }} {{ .Params.firstDayDate }} (حسب الرؤية المحلية في دولة الكويت)</b>
+    <b> أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} (حسب الرؤية المحلية في دولة الكويت)</b>
 </div>
-<br>
+<br><br>
 
 {{ $noImg := "الصورة غير متوفرة" }}
 
@@ -24,49 +16,77 @@
 <br>
 <div class="card-deck">
     <div class="card">
-        <img class="card-img-top" style="height: 34rem;" src="/crescents/{{.Name}}-mas-1.jpg" alt={{ $noImg }}>
+        <img class="card-img-top" style="height: 34rem;" src="/crescents/{{.Params.sayeghImg1}}" alt={{ $noImg }}>
         <div class="card-footer">
             <h3 class="text-muted">في مدينة الكويت</h3>
         </div>
     </div>
     <div class="card">
-        <img class="card-img-top" style="height: 34rem;" src="/crescents/{{.Name}}-mas-2.jpg" alt={{ $noImg }}>
+        <img class="card-img-top" style="height: 34rem;" src="/crescents/{{.Params.sayeghImg2}}" alt={{ $noImg }}>
         <div class="card-footer">
             <h3 class="text-muted">في مجموعة من مدن العالم</h3>
         </div>
     </div>
 </div>
 
-<br><br>
+<br><br><br>
+
 <h2>خرائط إمكانية رؤية الهلال بحسب المعايير الفلكية</h2>
 <br>
 
-<div class="card-deck">
-    <div class="card">
-        <a href="{{ .Params.odahHTML }}">
-            <img class="card-img-top" style="height: 10rem;" src="{{ .Params.odahImg }}" alt={{ $noImg }}>
-            <div class="card-footer">
-                <h3 class="text-muted">معيار محمد عودة</h3>
-            </div>
-        </a>
-    </div>
-    <div class="card">
-        <a href="{{ .Params.yallopHTML }}">
-            <img class="card-img-top" style="height: 10rem;" src="{{ .Params.yallopImg }}" alt={{ $noImg }}>
-            <div class="card-footer">
-                <h3 class="text-muted">معيار يالوب</h3>
-            </div>
-        </a>
-    </div>
-    <div class="card">
-        <a href="{{ .Params.shawkatHTML }}">
-            <img class="card-img-top" style="height: 10rem;" src="{{ .Params.shawkatImg }}" alt={{ $noImg }}>
-            <div class="card-footer">
-                <h3 class="text-muted">معيار خالد شوكت</h3>
-            </div>
-        </a>
+<a href="{{ .Params.odahHTML }}">
+    <h3>معيار محمد عودة</h3>
+</a>
+<div class="card">
+    <img class="card-img-top" src="/crescents/{{ .Params.odahImg1 }}" alt={{ $noImg }}>
+    <div class="card-footer">
+        <h4>الليلة الأولى</h4>
     </div>
 </div>
+<br><br>
+<div class="card">
+    <img class="card-img-top" src="/crescents/{{ .Params.odahImg2 }}" alt={{ $noImg }}>
+    <div class="card-footer">
+        <h4>الليلة الثانية</h4>
+    </div>
+</div>
+
+<br><br>
+<a href="{{ .Params.yallopHTML }}">
+    <h3>معيار يالوب</h3>
+</a>
+<div class="card">
+    <img class="card-img-top" src="/crescents/{{ .Params.yallopImg1 }}" alt={{ $noImg }}>
+    <div class="card-footer">
+        <h4>الليلة الأولى</h4>
+    </div>
+</div>
+<br><br>
+<div class="card">
+    <img class="card-img-top" src="/crescents/{{ .Params.yallopImg2 }}" alt={{ $noImg }}>
+    <div class="card-footer">
+        <h4>الليلة الثانية</h4>
+    </div>
+</div>
+
+<br><br>
+<a href="{{ .Params.shawkatHTML }}">
+    <h3>معيار خالد شوكت</h3>
+</a>
+<div class="card">
+    <img class="card-img-top" src="/crescents/{{ .Params.shawkatImg1 }}" alt={{ $noImg }}>
+    <div class="card-footer">
+        <h4>الليلة الأولى</h4>
+    </div>
+</div>
+<br><br>
+<div class="card">
+    <img class="card-img-top" src="/crescents/{{ .Params.shawkatImg2 }}" alt={{ $noImg }}>
+    <div class="card-footer">
+        <h4>الليلة الثانية</h4>
+    </div>
+</div>
+
 
 <br><br>
 <div class="alert alert-warning" role="alert">
