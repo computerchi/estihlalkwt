@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<h1 class="section-header">{{ .Title }}</h1>
+<p>{{ .Content }}</p>
+<div class="container">
+  {{ range.Pages.ByPublishDate.Reverse }}
+  <div class="row">
+    <div class="col-sm-2">
+        <a class="font-125" href="{{ .RelPermalink }}"><img src="{{ .Params.image }}" class="thumbnail rounded" alt=""></a>
+    </div>
+    <div class="col-sm">
+        <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> <br>
+        {{ .Params.description | markdownify }}
+    </div>
+  </div>
+  <hr>
+  {{ end }}
+</div>
+{{ partial "return-1-btn" . }}
+{{ end }}

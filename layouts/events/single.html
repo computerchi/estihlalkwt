@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<h1 class="section-header">{{ .Title }}</h1>
+<br />
+<div class="container">
+  <h3>{{ .Params.description }}</h3>
+  <br>
+  {{ .Content }}
+</div>
+
+{{ partial "return-2-btn.html" (dict "label" "الأحداث الفلكية" "link" "events") }}
+
+{{ end }}
