@@ -30,11 +30,11 @@ preserveTaxonomyNames = true
   #   pre = "eye"
   #   url = "/about/observation/"
   #   weight = 4
-  [[menu.main]]
-    name = "من نحن"
-    pre = "users"
-    url = "/about/us/"
-    weight = 5
+  # [[menu.main]]
+  #   name = "من نحن"
+  #   pre = "users"
+  #   url = "/about/us/"
+  #   weight = 5
 
 [taxonomies]
   tag = "tags"
