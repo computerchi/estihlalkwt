@@ -23,7 +23,7 @@ preserveTaxonomyNames = true
   # [[menu.main]]
   #   name = "ألبوم الصور"
   #   pre = "camera"
-  #   url = "/about/under-construction/"
+  #   url = "/albums/"
   #   weight = 3
   # [[menu.main]]
   #   name = "كيفية الرصد"
