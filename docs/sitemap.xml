@@ -48,6 +48,16 @@
   </url>
   
   <url>
+    <loc>https://estihlalkwt.com/albums/album003/</loc>
+    <lastmod>2019-04-22T00:31:12+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://estihlalkwt.com/albums/album001/</loc>
+    <lastmod>2019-04-21T23:45:59+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://estihlalkwt.com/events/lunar-2019jul16/</loc>
     <lastmod>2019-03-30T20:09:35+03:00</lastmod>
   </url>
@@ -158,11 +168,6 @@
   </url>
   
   <url>
-    <loc>https://estihlalkwt.com/news/you-video/</loc>
-    <lastmod>2019-02-08T01:52:13+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://estihlalkwt.com/books/astro-ensyclop/</loc>
     <lastmod>2019-02-08T01:31:50+03:00</lastmod>
   </url>
@@ -250,6 +255,12 @@
   <url>
     <loc>https://estihlalkwt.com/tags/</loc>
     <lastmod>2019-03-30T20:09:35+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://estihlalkwt.com/albums/</loc>
+    <lastmod>2019-04-22T00:31:12+03:00</lastmod>
     <priority>0</priority>
   </url>
   

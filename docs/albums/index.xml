@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Albums on اللجنة الكويتية المشتركة للاستهلال</title>
+    <link>https://estihlalkwt.com/albums/</link>
+    <description>Recent content in Albums on اللجنة الكويتية المشتركة للاستهلال</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Apr 2019 00:31:12 +0300</lastBuildDate>
+    
+	<atom:link href="https://estihlalkwt.com/albums/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>من إحدى طلعات الاستهلال على شاطئ البحر قرب مستشفى الولادة دولة الكويت</title>
+      <link>https://estihlalkwt.com/albums/album003/</link>
+      <pubDate>Mon, 22 Apr 2019 00:31:12 +0300</pubDate>
+      
+      <guid>https://estihlalkwt.com/albums/album003/</guid>
+      <description>      </description>
+    </item>
+    
+    <item>
+      <title>زيارة لديوان سماحة الشيخ صادق بوعباس</title>
+      <link>https://estihlalkwt.com/albums/album001/</link>
+      <pubDate>Sun, 21 Apr 2019 23:45:59 +0300</pubDate>
+      
+      <guid>https://estihlalkwt.com/albums/album001/</guid>
+      <description>                              </description>
+    </item>
+    
+  </channel>
+</rss>
