@@ -24,4 +24,4 @@ draft: false
 
 للاستفسار والتسجيل الرجاء الاتصال على الرقم 66234448
  -->
-{{< figure src="ads/lect001.jpg" >}}
+{{< figure src="../lect001.jpg" >}}
