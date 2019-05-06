@@ -17,4 +17,4 @@ draft: false
 {{< figure src="../../albums/album009/b7bb15b0-96f5-4815-ad85-85f5b79d3ed1.jpg" >}}
 
 
-المزيد من صور المحاضرة في [البوم الصور](https://estihlalkwt.com/albums/)
+المزيد من صور الاستهلال في [البوم الصور](https://estihlalkwt.com/albums/)
