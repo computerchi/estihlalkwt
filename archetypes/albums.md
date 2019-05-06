@@ -5,4 +5,4 @@ tags: []
 draft: false
 ---
 
-{{< figure src="/albums/album009/IMG.JPG" >}}
+{{< figure src="/albums/album009/IMG.jpg" >}}
