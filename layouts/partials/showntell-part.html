@@ -1,11 +1,11 @@
 <h3 class="section-header">صورة وتعليق</h3>
-<div class="card">
+<div class="card border-light">
     {{ range first 1 (where .Site.Pages.ByPublishDate.Reverse "Section" "showntell")  }}
-    {{ $src := print "/showntell/" .Params.image }}
+    {{ $src := print "/showntell/images/" .Params.image }}
     <a href="{{ .Permalink }}">
         <img class="card-img-top" src="{{ $src }}" alt="Card image cap">
     </a>
-    <div class="card-body">
+    <div class="card-body bottom-shadow">
         <a href="{{ .Permalink }}">
             <h5 class="card-title">{{ .Title }}</h5>
             </a>

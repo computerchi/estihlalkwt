@@ -6,6 +6,17 @@
       <!-- ads -->
       {{ partial "ads-part.html" . }}
 
+        <div class="row">
+          <div class="col-md-4">
+            {{ partial "crescents-part.html" . }}
+          </div>
+          <div class="col-md-8">
+            <!-- show and tell -->
+            {{ partial "showntell-part.html" . }}
+          </div>
+        </div>
+      <br>
+
       <!-- news -->
       {{ partial "news-part.html" . }}
 
@@ -16,14 +27,14 @@
     </div>
 
     <aside class="col-md-3">
-    
+
       <!-- side buttons -->
       <div id="desktop-side-buttons">
         {{ partial "side-buttons.html" . }}
         <hr />
       </div>
-    
-      <!-- tages -->
+
+      <!-- tags -->
       <div class="container">
         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
         {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
@@ -32,11 +43,9 @@
         {{ end }}
       </div>
       <hr />
-    
-      <!-- show and tell -->
-      {{ partial "showntell-part.html" . }}
+
       <br>
-    
+
     </aside>
   </div>
 </div>
