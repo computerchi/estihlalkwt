@@ -1,12 +1,15 @@
 <div>
-  {{ range first 3 (where .Site.Pages.ByPublishDate.Reverse "Section" "crescents") }}
+  <h3 class="section-header">
+    رصد الاهلة
+</h3>
+{{ range first 3 (where .Site.Pages.ByPublishDate.Reverse "Section" "crescents") }}
   {{ if eq .Kind "page" }}
-    <h3 class="section-header">
+  <article class="container bottom-shadow">
+    <h4> 
         {{ .Params.hijryMonth }}
-    </h3>
-    <article class="container bottom-shadow">
+    </h4>
       <div>
-        <b> أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} </b>
+         أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} 
         <a href="{{ .Permalink }}">
          التفاصيل
         </a>
