@@ -30,12 +30,12 @@
       </table>
     </div>
     <div class="card-footer">
-      <a href="/books/{{ .Params.file }}" class="btn btn-primary" style="padding: 0 10px;">الكتاب</a>
+      <a href="/books/PDF/{{ .Params.file }}" class="btn btn-primary" style="padding: 0 10px;">الكتاب</a>
     </div>
   </div>
 
   {{ $src := print "/books/" .Params.thumbnail }}
-    <img class="card-img-top book-img-size" src={{ $src }} alt="صورة الكتاب غير متوفرة" />
+    <img class="card-img-top book-img-size" src=thumbnail/{{ $src }} alt="صورة الكتاب غير متوفرة" />
 
   </div>
 <br>
