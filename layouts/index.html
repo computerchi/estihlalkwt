@@ -6,16 +6,11 @@
       <!-- ads -->
       {{ partial "ads-part.html" . }}
 
-        <div class="row">
-          <div class="col-md-4">
-            {{ partial "crescents-part.html" . }}
-          </div>
-          <div class="col-md-8">
-            <!-- show and tell -->
-            {{ partial "showntell-part.html" . }}
-          </div>
-        </div>
-      <br>
+        <!-- show and tell -->
+      <div>
+        {{ partial "showntell-part.html" . }}
+      </div>
+  <br>
 
       <!-- news -->
       {{ partial "news-part.html" . }}
@@ -44,7 +39,17 @@
       </div>
       <hr />
 
-      <br>
+      <!-- Crescent sighting -->
+      <div>
+        {{ partial "crescents-part.html" . }}
+      </div>
+      <hr>
+
+      <!-- latest books -->
+      <div>
+        {{ partial "latest-books-part.html" . }}
+      </div>
+      <hr>
 
     </aside>
   </div>

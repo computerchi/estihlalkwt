@@ -1,4 +1,4 @@
-<h3 class="section-header">صورة وتعليق</h3>
+<!-- <h3 class="section-header">صورة وتعليق</h3> -->
 <div class="card border-light">
     {{ range first 1 (where .Site.Pages.ByPublishDate.Reverse "Section" "showntell")  }}
     {{ $src := print "/showntell/images/" .Params.image }}

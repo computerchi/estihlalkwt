@@ -2,7 +2,7 @@
   <h3 class="section-header">
     رصد الاهلة
 </h3>
-{{ range first 3 (where .Site.Pages.ByPublishDate.Reverse "Section" "crescents") }}
+{{ range first 2 (where .Site.Pages.ByPublishDate.Reverse "Section" "crescents") }}
   {{ if eq .Kind "page" }}
   <article class="container bottom-shadow">
     <h4> 

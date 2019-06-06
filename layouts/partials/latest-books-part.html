@@ -1,0 +1,14 @@
+<div>
+  <h3 class="section-header">
+    جديد المكتبة
+  </h3>
+  {{ range first 5 (where .Site.Pages.ByPublishDate.Reverse "Section" "books") }}
+  {{ if eq .Kind "page" }}
+
+  <h6>
+    <a class="hyperlink font-125" href="/books/PDF/{{ .Params.file }}"><i data-feather="book-open"></i>&nbsp;{{ .Title }}</a>
+  </h6>
+
+  {{ end }}
+  {{ end }}
+</div>
