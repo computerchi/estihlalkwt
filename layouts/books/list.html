@@ -34,8 +34,8 @@
     </div>
   </div>
 
-  {{ $src := print "/books/" .Params.thumbnail }}
-    <img class="card-img-top book-img-size" src=thumbnail/{{ $src }} alt="صورة الكتاب غير متوفرة" />
+  {{ $src := print "/books/thumbnail/" .Params.thumbnail }}
+    <img class="card-img-top book-img-size" src={{ $src }} alt="صورة الكتاب غير متوفرة" />
 
   </div>
 <br>
