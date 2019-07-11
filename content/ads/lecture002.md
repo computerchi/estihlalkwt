@@ -29,4 +29,4 @@ draft: false
 للاستفسار والتسجيل الرجاء الاتصال على الرقم 66234448
 
  -->
-{{< figure src="../lecture002.jpg" >}}
+{{< figure src="/ads/lecture002.jpg" >}}
