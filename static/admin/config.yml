@@ -17,7 +17,7 @@ collections:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
-      - {label: "وسوم", name: "tags", widget: "list", default: "خبر"}
+      - {label: "وسوم", name: "tags", widget: "list"}
       - {label: "المتن", name: "body", widget: "markdown"}
   - name: "ads"
     label: "اعلان"
@@ -29,5 +29,5 @@ collections:
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "تاريخ انتهاء الصلاحية", name: "adExpiryDate", widget: "datetime"}
       - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
-      - {label: "وسوم", name: "tags", widget: "list", default: "اعلان"}
+      - {label: "وسوم", name: "tags", widget: "list"}
       - {label: "المتن", name: "body", widget: "markdown"}
