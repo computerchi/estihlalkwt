@@ -43,7 +43,7 @@ collections:
       - {label: "الشهر الهجري", name: "hijryMonth", widget: "select", options: ["محرم", "صفر", "ربيع الاول", "ربيع الاخر", "جمادى الاولى", "جمادى الاخرة", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"]}
       - {label: "السنة الهجرية", name: "hijryYear", widget: "number", default: 1440, valueType: "int", min: 1440, max: 1500}
       - {label: "اليوم الاول", name: "firstDayName", widget: "select", options: ["السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة"]}
-      - {label: "تاريخ اليوم الاول", name: "firstDayDate", widget: "string", default: "dd/mm/yyyy"}
+      - {label: "تاريخ اليوم الاول", name: "firstDayDate", widget: "string", default: "DD/MM/YYYY"}
       - {label: "شرح تفاصيل الرصد", name: "body", widget: "markdown"}
       - {label: "الصائغ رسم الهلال", name: "sayeghImg1", widget: "image", allow_multiple: "false"}
       - {label: "الصائغ جدول المدن", name: "sayeghImg2", widget: "image", allow_multiple: "false"}
