@@ -31,3 +31,29 @@ collections:
       - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
       - {label: "وسوم", name: "tags", widget: "list"}
       - {label: "المتن", name: "body", widget: "markdown"}
+  - name: "crescents"
+    label: "رصد الاهلة"
+    folder: content/crescents
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
+      - {label: "الشهر الهجري (مثال شعبان)", name: "hijryMonth", widget: "string"}
+      - {label: "السنة الهجرية (مثال 1441)", name: "hijryYear", widget: "string"}
+      - {label: "اليوم الاول (مثال السبت)", name: "firstDayName", widget: "string"}
+      - {label: "تاريخ اليوم الاول", name: "firstDayDate", widget: "date"}
+      - {label: "الصائغ رسم الهلال", name: "sayeghImg1", widget: "image", allow_multiple: "false"}
+      - {label: "الصائغ جدول المدن", name: "sayeghImg2", widget: "image", allow_multiple: "false"}
+      - {label: "عودة اللية الاولى", name: "odahImg1", widget: "image", allow_multiple: "false"}
+      - {label: "عودة اللية الثانية", name: "odahImg2", widget: "image", allow_multiple: "false"}
+      - {label: "يالوب اللية الاولى", name: "yallopImg1", widget: "image", allow_multiple: "false"}
+      - {label: "يالوب اللية الثانية", name: "yallopImg2", widget: "image", allow_multiple: "false"}
+      - {label: "شوكت اللية الاولى", name: "shawkatImg1", widget: "image", allow_multiple: "false"}
+      - {label: "شوكت اللية الثانية", name: "shawkatImg2", widget: "image", allow_multiple: "false"}
+      - {label: "شرح تفاصيل الرصد", name: "body", widget: "markdown"}
+      - {label: "موقع عودة", name: "odahHTML", widget: "string", default: "http://www.icoproject.org/icop.html"}
+      - {label: "موقع يالوب", name: "yallopHTML", widget: "string", default: "http://astro.ukho.gov.uk/moonwatch/index.html"}
+      - {label: "موقع شوكت", name: "shawkatHTML", widget: "string", default: "https://www.moonsighting.com/"}
+
