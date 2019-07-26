@@ -17,5 +17,3 @@ tags:
 {{< figure src="../../albums/album008/83f72d1e-bb88-4b9b-92d4-b74e17aee547.jpg" >}}
 
 المزيد من صور المحاضرة في البوم الصور.
-
-{{<youtube UysVf2sG9z4>}}
