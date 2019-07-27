@@ -6,7 +6,7 @@
   {{ if eq .Kind "page" }}
 
   <h6>
-    <a class="hyperlink font-125" href="/books/PDF/{{ .Params.file }}"><kbd>{{ .Title }}</kbd></a>
+    <a class="hyperlink font-125" href="/books/PDF/{{ .Params.file }}"><span class="border">{{ .Title }}</span></a>
   </h6>
 
   {{ end }}
