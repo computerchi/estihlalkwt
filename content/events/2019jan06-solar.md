@@ -1,16 +1,7 @@
 ---
-<<<<<<< HEAD:content/events/2019jan06-solar.md
 title: "كسوف جزئي"
 date: 2019-03-26T01:00:00+03:00
 image: "images/solar-partial.jpg"
-=======
-title: كسوف جزئي
-draft: 'false'
-tags:
-  - كسوف
-  - ''
-image: images/solar-partial.jpg
->>>>>>> f8538d5168280f783e78750b7fc3522f03e11113:content/events/solar-2019jan06.md
 eventDate: 2019-01-6
 description: >-
   كسوف جزئي  يوم الأحد ٦ كانون الثاني (يناير) ٢٠١٩م يشاهد في شرق آسيا ولا يشاهد
