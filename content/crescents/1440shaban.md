@@ -1,23 +1,22 @@
 ---
-title: "1440shaban"
-date: 2019-02-09T15:53:34+03:00
-tags: []
+title: 144008 شعبان
+date: 2019-02-09T12:53:34.000Z
 draft: false
-hijryMonth: "شعبان"
+hijryMonth: شعبان
 hijryYear: 1440
-firstDayName: "الأحد"
-firstDayDate: "2019/4/7"
-odahHTML: "http://www.icoproject.org/icop.html"
-yallopHTML: "http://astro.ukho.gov.uk/moonwatch/index.html"
-shawkatHTML: "https://www.moonsighting.com/"
-sayeghImg1: "1440/shaban/sygsbn.jpg"
-sayeghImg2: "1440/shaban/2sygsbn.jpg"
-odahImg1: "1440/shaban/sha40_1.gif"
-odahImg2: "1440/shaban/sha40_2.gif"
-yallopImg1: "1440/shaban/F2019Apr05_10.jpg"
-yallopImg2: "1440/shaban/F2019Apr06_11.jpg"
-shawkatImg1: "1440/shaban/1440shb_4-5-2019.gif"
-shawkatImg2: "1440/shaban/1440shb_4-6-2019.gif"
+firstDayName: الأحد
+firstDayDate: 2019/4/7
+sayeghImg1: 1440/shaban/sygsbn.jpg
+sayeghImg2: 1440/shaban/2sygsbn.jpg
+odahImg1: 1440/shaban/sha40_1.gif
+odahImg2: 1440/shaban/sha40_2.gif
+yallopImg1: 1440/shaban/F2019Apr05_10.jpg
+yallopImg2: 1440/shaban/F2019Apr06_11.jpg
+shawkatImg1: 1440/shaban/1440shb_4-5-2019.gif
+shawkatImg2: 1440/shaban/1440shb_4-6-2019.gif
+odahHTML: 'http://www.icoproject.org/icop.html'
+yallopHTML: 'http://astro.ukho.gov.uk/moonwatch/index.html'
+shawkatHTML: 'https://www.moonsighting.com/'
 ---
 
 يولد الهلال (الاقتران المركزي) يوم الاربعاء 2019/11/7 الساعة 16:02 بالتوقيت العالمي (الساعة 19:02 بتوقيت مكة المكرمة).
