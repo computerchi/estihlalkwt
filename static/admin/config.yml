@@ -79,6 +79,18 @@ collections:
       - {label: "الصورة", name: "image", widget: "select", options: ["images/lunar-partial.jpg","images/lunar-total.jpg","images/solar-partial.jpg","images/solar-total.jpg","images/solar-ring.jpg"]}
       - {label: "وصف مختصر للحدث", name: "description", widget: "string"}
       - {label: "وصف تفاصيل الحدث", name: "body", widget: "markdown"}
+  - name: "articles"
+    label: "مقال"
+    folder: content/articles
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
+      - {label: "المؤلف", name: "author", widget: "string"}
+      - {label: "وسوم", name: "tags", widget: "list"}
+      - {label: "نص المقال", name: "body", widget: "markdown"}
   - name: "links"
     label: "رابط علمي"
     folder: content/links
