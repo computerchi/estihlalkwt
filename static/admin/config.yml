@@ -50,7 +50,7 @@ collections:
     fields:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
-      - {label: "مسودة", name: "draft", widget: "select", default: false, options: [true,false]}
+      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
       - {label: "الشهر الهجري", name: "hijryMonth", widget: "select", options: ["محرم", "صفر", "ربيع الاول", "ربيع الاخر", "جمادى الاولى", "جمادى الاخرة", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"]}
       - {label: "السنة الهجرية", name: "hijryYear", widget: "number", default: 1440, valueType: "int", min: 1440, max: 1500}
       - {label: "اليوم الاول", name: "firstDayName", widget: "select", options: ["السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة"]}
