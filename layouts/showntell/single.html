@@ -3,8 +3,7 @@
 <h1 class="section-header">{{ .Title }}</h1>
 <br />
 <div class="container">
-  {{ $src := print "/showntell/images/" .Params.image }}
-  <img src="{{ $src }}" alt="صورة مفقودة" />
+  <img src="{{ .Params.image }}" alt="صورة مفقودة" />
 </div>
 
 <br />
