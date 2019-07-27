@@ -1,6 +1,6 @@
 ---
 title: خسوف كلي
-draft: false
+draft: 'false'
 tags:
   - ''
   - خسوف
