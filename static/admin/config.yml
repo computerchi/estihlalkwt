@@ -56,4 +56,14 @@ collections:
       - {label: "موقع عودة", name: "odahHTML", widget: "string", default: "http://www.icoproject.org/icop.html"}
       - {label: "موقع يالوب", name: "yallopHTML", widget: "string", default: "http://astro.ukho.gov.uk/moonwatch/index.html"}
       - {label: "موقع شوكت", name: "shawkatHTML", widget: "string", default: "https://www.moonsighting.com/"}
+  - name: "links"
+    label: "رابط علمي"
+    folder: content/links
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "الرابط", name: "link", widget: "string"}
+      - {label: "الترتيب", name: "weight", widget: "number"}
+      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
 
