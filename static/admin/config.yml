@@ -8,17 +8,6 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "news"
-    label: "خبر"
-    folder: content/news
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "العنوان", name: "title", widget: "string"}
-      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
-      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
-      - {label: "وسوم", name: "tags", widget: "list"}
-      - {label: "المتن", name: "body", widget: "markdown"}
   - name: "ads"
     label: "اعلان"
     folder: content/ads
@@ -28,6 +17,28 @@ collections:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "تاريخ انتهاء الصلاحية", name: "adExpiryDate", widget: "datetime"}
+      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
+      - {label: "وسوم", name: "tags", widget: "list"}
+      - {label: "المتن", name: "body", widget: "markdown"}
+  - name: "showntell"
+    label: "صورة وتعليق"
+    folder: content/showntell
+    create: true
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
+      - {label: "الصورة", name: "image", widget: "image"}
+      - {label: "التعليق", name: "body", widget: "markdown"}
+  - name: "news"
+    label: "خبر"
+    folder: content/news
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
       - {label: "وسوم", name: "tags", widget: "list"}
       - {label: "المتن", name: "body", widget: "markdown"}
