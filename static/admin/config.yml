@@ -67,6 +67,18 @@ collections:
       - {label: "موقع عودة", name: "odahHTML", widget: "string", default: "http://www.icoproject.org/icop.html"}
       - {label: "موقع يالوب", name: "yallopHTML", widget: "string", default: "http://astro.ukho.gov.uk/moonwatch/index.html"}
       - {label: "موقع شوكت", name: "shawkatHTML", widget: "string", default: "https://www.moonsighting.com/"}
+  - name: "events"
+    label: "حدث فلكي"
+    folder: content/events
+    create: true
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}-{{slug}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "select", options: ["خسوف جزئي","خسوف كلي","كسوف جزئي","كسوف كلي","كسوف حلقي"]}
+      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
+      - {label: "وسوم", name: "tags", widget: "list", default: ["خسوف","كسوف"], allow_add: "true"}
+      - {label: "الصورة", name: "image", widget: "select", options: ["images/lunar-partial.jpg","images/lunar-total.jpg","images/solar-partial.jpg","images/solar-total.jpg","images/solar-ring.jpg"]}
+      - {label: "وصف مختصر للحدث", name: "description", widget: "string"}
+      - {label: "وصف تفاصيل الحدث", name: "body", widget: "markdown"}
   - name: "links"
     label: "رابط علمي"
     folder: content/links
