@@ -2,6 +2,7 @@
 title: "خسوف كلي"
 date: 2019-03-30T20:06:34+03:00
 image: "images/lunar-total.jpg"
+eventDate: 2019-01-21
 tags: ["","خسوف"]
 draft: false
 description: "خسوف كلي يشاهد جزئيا في أغلب البلدان العربية يحدث فجر ٢١ كانون الثاني (يناير) ٢٠١٩م"

@@ -3,7 +3,7 @@
 <h1 class="section-header">الاحداث الفلكية</h1>
 <p>{{ .Content }}</p>
 <div class="container">
-  {{ range.Pages.ByPublishDate.Reverse }}
+  {{ range (.Pages.ByParam "eventDate").Reverse }}
   <div class="row">
     <div class="col-sm-2">
         <a class="font-125" href="{{ .RelPermalink }}"><img src="{{ .Params.image }}" class="thumbnail rounded" alt=""></a>
