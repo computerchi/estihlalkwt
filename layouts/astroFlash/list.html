@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-sm">
       <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a><br />
-      بقلم: {{ .Params.author | markdownify }} 
+      كتبها: {{ .Params.author | markdownify }} 
     </div>
     <div class="col-sm">
       {{ partial "date-and-tags.html" . }}
