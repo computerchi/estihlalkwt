@@ -52,6 +52,7 @@ collections:
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
       - {label: "وسوم", name: "tags", widget: "list"}
+      - {label: "الكاتب", name: "author", widget: "string"}
       - {label: "المتن", name: "body", widget: "markdown"}
   - name: "crescents"
     label: "رصد الاهلة"

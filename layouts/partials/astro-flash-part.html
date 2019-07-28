@@ -1,0 +1,27 @@
+<div>
+    <h3 class="section-header">مقالات</h3>
+    {{ range first 1 (where .Site.Pages.ByPublishDate.Reverse "Section" "newsFlash") }}
+    {{ if eq .Kind "page" }}
+    <article class="container">
+      <h4>
+        <a href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+      </h4>
+      <div class="row bottom-shadow">
+        <div class="col-md-3">
+          {{ partial "date-only.html" . }} <br />
+          <div style="font-size: .9em">كتبها: {{ .Params.author }}</div>
+        </div>
+        <div class="col-md-9">
+          <span class="myFontSize">{{ .Summary }}</span>
+          <a href="{{ .Permalink }}">
+            إقرأ الموضوع كاملاً
+          </a>
+        </div>
+      </div>
+      <br />
+    </article>
+    {{ end }}
+    {{ end }}
+  </div>
