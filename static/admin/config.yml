@@ -42,6 +42,17 @@ collections:
       - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
       - {label: "وسوم", name: "tags", widget: "list"}
       - {label: "المتن", name: "body", widget: "markdown"}
+  - name: "astroFlash"
+    label: "اضاءة فلكية"
+    folder: content/astroFlash
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
+      - {label: "وسوم", name: "tags", widget: "list"}
+      - {label: "المتن", name: "body", widget: "markdown"}
   - name: "crescents"
     label: "رصد الاهلة"
     folder: content/crescents
