@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <h1 class="section-header">{{ .Title }}</h1>
-<div class="font-125">بقلم: {{ .Params.author }}</div>
+<div class="font-125">كتبها: {{ .Params.author }}</div>
 {{ partial "date-and-tags.html" . }}<br /><br />
 {{ .Content }}
 
@@ -11,6 +11,6 @@
     {{ partial "tags-only.html" . }}
 {{ end }}
 
-{{ partial "return-2-btn.html" (dict "label" "الأخبار" "link" "news") }}
+{{ partial "return-2-btn.html" (dict "label" "اضاءات فلكية" "link" "astroFlash") }}
 
 {{ end }}
