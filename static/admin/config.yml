@@ -12,7 +12,7 @@ collections:
     label: "اعلان"
     folder: content/ads
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
     fields:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
@@ -35,7 +35,7 @@ collections:
     label: "خبر"
     folder: content/news
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
     fields:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
@@ -46,7 +46,7 @@ collections:
     label: "اضاءة فلكية"
     folder: content/astroFlash
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
     fields:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
@@ -58,7 +58,7 @@ collections:
     label: "رصد الاهلة"
     folder: content/crescents
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
     fields:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
@@ -96,7 +96,7 @@ collections:
     label: "مقال"
     folder: content/articles
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
     fields:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
