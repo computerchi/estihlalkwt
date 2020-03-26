@@ -1,8 +1,7 @@
 ---
-title: "timeanddate.com/astronomy"
-date: 2019-02-09T17:41:57+03:00
-link: "https://www.timeanddate.com/astronomy/"
-tags: []
-draft: false
+title: قسم الفلك في موقع تايم آند ديت
+link: 'https://www.timeanddate.com/astronomy/'
 weight: 1200
+draft: false
 ---
+
