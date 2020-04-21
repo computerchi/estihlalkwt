@@ -1,0 +1,42 @@
+{{ define "main" }}
+<h1 class="section-header">امساكيات</h1>
+
+<style>
+    p {
+        color: gray;
+    }
+</style>
+
+{{ range.Pages.ByPublishDate }}
+
+<div class="card ">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>
+                    {{ .Params.city }} {{ .Params.hijriYear }} هجري
+                </h3>
+            </div>
+            <div class="col-sm-6">
+                <p>
+                    <span width=100px>اعداد</span> {{ .Params.author }}
+                </p>
+                <p>
+                    <span width=100px>سنة النشر</span> {{ .Params.yearPublished }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a href="/imsakiya/PDF/{{ .Params.pdf }}" class="btn btn-labeled btn-primary" style="padding: 0 10px;">
+            <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية</a>
+        </button>
+    </div>
+</div>
+
+<br>
+
+{{ end }}
+
+{{ partial "return-1-btn" . }}
+{{ end }}
