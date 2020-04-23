@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar" prefix="og: http://ogp.me/ns#">
-  {{ partial "head.html" . }}
-  <body>
-    {{ partial "jumbo.html" . }}
-    {{ partial "nav.html" . }}
-    <div class="container">
-      <main id="main">{{ block "main" . }}{{ end }}</main>
-    </div>
-    {{ partial "foot.html" . }}
-    {{ partial "script.html" . }}
+{{ partial "head.html" . }}
 
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
+<body onload="replaceDigits()">
+  {{ partial "jumbo.html" . }}
+  {{ partial "nav.html" . }}
+  <div class="container">
+    <main id="main">{{ block "main" . }}{{ end }}</main>
+  </div>
+  {{ partial "foot.html" . }}
+  {{ partial "script.html" . }}
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+
+  <script>
+    var replaceDigits = function () {
+      var map = ["&\#1632;", "&\#1633;", "&\#1634;", "&\#1635;", "&\#1636;", "&\#1637;", "&\#1638;", "&\#1639;", "&\#1640;", "&\#1641;"]
+      var hindiClasses = document.getElementsByClassName("hindi");
+      for (let element of hindiClasses) {
+        element.innerHTML = element.innerHTML.replace(/\d(?=[^<>]*(<|$))/g, function ($0) { return map[$0] });
       }
-    </script>
-  </body>
+    }
+  </script>
+
+</body>
+
 </html>

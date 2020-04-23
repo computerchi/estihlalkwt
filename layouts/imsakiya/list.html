@@ -1,39 +1,106 @@
 {{ define "main" }}
-<h1 class="section-header">امساكيات</h1>
 
 <style>
-    p {
-        color: gray;
+    img {
+        float:left;
+        width:50%;
+        height:100%;
+        object-fit:cover;
     }
 </style>
 
 {{ range.Pages.ByPublishDate }}
 
-<div class="card ">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-sm-6">
-                <h3>
-                    {{ .Params.city }} {{ .Params.hijriYear }} هجري
-                </h3>
-            </div>
-            <div class="col-sm-6">
-                <p>
-                    <span width=100px>اعداد</span> {{ .Params.author }}
-                </p>
-                <p>
-                    <span width=100px>سنة النشر</span> {{ .Params.yearPublished }}
-                </p>
-            </div>
+<h1 class="section-header hindi">
+    إمساكيات شهر رمضان لعام{{ .Params.hijriYear }}هـ
+</h1>
+<div class="card-deck">
+    <div class="card" style="width: 18rem;">
+        <img src="/imsakiya/thumbnails/kuwait.jpg" class="card-img-top" alt="kuwait">
+        <div class="card-body">
+            <h5 class="card-title">مدينة الكويت</h5>
+            <a href="/imsakiya/PDF/{{ .Params.hijriYear }}/imsakiya-Kuwait-City-KW-Asia-{{ .Params.hijriYear }}.pdf"
+                class="btn btn-labeled btn-primary" style="padding: 0 10px;">
+                <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية
+            </a>
         </div>
     </div>
-    <div class="card-footer">
-        <a href="/imsakiya/PDF/{{ .Params.pdf }}" class="btn btn-labeled btn-primary" style="padding: 0 10px;">
-            <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية</a>
-        </button>
+    <div class="card" style="width: 18rem;">
+        <img src="/imsakiya/thumbnails/mecca.jpg" class="card-img-top" alt="kuwait">
+        <div class="card-body">
+            <h5 class="card-title">مكة المكرمة</h5>
+            <a href="/imsakiya/PDF/{{ .Params.hijriYear }}/imsakiya-Mecca-SA-Asia-{{ .Params.hijriYear }}.pdf"
+                class="btn btn-labeled btn-primary" style="padding: 0 10px;">
+                <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية
+            </a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="/imsakiya/thumbnails/madina.jpg" class="card-img-top" alt="kuwait">
+        <div class="card-body">
+            <h5 class="card-title">المدينة المنورة</h5>
+            <a href="/imsakiya/PDF/{{ .Params.hijriYear }}/imsakiya-Madina-SA-Asia-{{ .Params.hijriYear }}.pdf"
+                class="btn btn-labeled btn-primary" style="padding: 0 10px;">
+                <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية
+            </a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="/imsakiya/thumbnails/annajaf.jpg" class="card-img-top" alt="kuwait">
+        <div class="card-body">
+            <h5 class="card-title">النجف الأشرف</h5>
+            <a href="/imsakiya/PDF/{{ .Params.hijriYear }}/imsakiya-Annajaf-IQ-Asia-{{ .Params.hijriYear }}.pdf"
+                class="btn btn-labeled btn-primary" style="padding: 0 10px;">
+                <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية
+            </a>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card-deck">
+    <div class="card" style="width: 18rem;">
+        <img src="/imsakiya/thumbnails/qom.jpg" class="card-img-top" alt="kuwait">
+        <div class="card-body">
+            <h5 class="card-title">قم المقدسة</h5>
+            <a href="/imsakiya/PDF/{{ .Params.hijriYear }}/imsakiya-Qom-IR-Asia-{{ .Params.hijriYear }}.pdf"
+                class="btn btn-labeled btn-primary" style="padding: 0 10px;">
+                <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية
+            </a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="/imsakiya/thumbnails/kadhmain.jpg" class="card-img-top" alt="kuwait">
+        <div class="card-body">
+            <h5 class="card-title">الكاظمية - بغداد</h5>
+            <a href="/imsakiya/PDF/{{ .Params.hijriYear }}/imsakiya-Baghdad-IQ-Asia-{{ .Params.hijriYear }}.pdf"
+                class="btn btn-labeled btn-primary" style="padding: 0 10px;">
+                <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية
+            </a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="/imsakiya/thumbnails/mashhad.jpg" class="card-img-top" alt="kuwait">
+        <div class="card-body">
+            <h5 class="card-title">مشهد المقدسة</h5>
+            <a href="/imsakiya/PDF/{{ .Params.hijriYear }}/imsakiya-Mashhad-IR-Asia-{{ .Params.hijriYear }}.pdf"
+                class="btn btn-labeled btn-primary" style="padding: 0 10px;">
+                <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية
+            </a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="/imsakiya/thumbnails/samaraa.jpg" class="card-img-top" alt="kuwait">
+        <div class="card-body">
+            <h5 class="card-title">سامراء</h5>
+            <a href="/imsakiya/PDF/{{ .Params.hijriYear }}/imsakiya-Samraa-IQ-Asia-{{ .Params.hijriYear }}.pdf"
+                class="btn btn-labeled btn-primary" style="padding: 0 10px;">
+                <span class="btn-label"><i data-feather="download"></i></span>&nbsp;&nbsp;تنزيل الامساكية
+            </a>
+        </div>
     </div>
 </div>
 
+<br>
 <br>
 
 {{ end }}
