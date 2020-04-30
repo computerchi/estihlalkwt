@@ -1,12 +1,15 @@
 {{ define "main" }}
 
-<h1 class="section-header">تفاصيل رصد هلال شهر {{ .Params.hijryMonth }} لسنة {{ .Params.hijryYear }} هـ</h1>
-<br />
+<div class="hindi">
+    <h1 class="section-header">تفاصيل رصد هلال شهر {{ .Params.hijryMonth }} لسنة {{ .Params.hijryYear }} هـ</h1>
+    <br />
 
-{{ .Content }}
-<br>
-<div class="alert alert-success" role="alert">
-    <b> أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} (حسب الرؤية المحتملة في دولة الكويت)</b>
+    {{ .Content }}
+    <br>
+    <div class="alert alert-success" role="alert">
+        <b> أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} (حسب
+            الرؤية المحتملة في دولة الكويت)</b>
+    </div>
 </div>
 <br><br>
 
