@@ -87,7 +87,7 @@ collections:
     fields:
       - {label: "العنوان", name: "title", widget: "select", options: ["خسوف جزئي","خسوف كلي","خسوف ظليلي","كسوف جزئي","كسوف كلي","كسوف حلقي"]}
       - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
-      - {label: "وسوم", name: "tags", widget: "list", default: ["خسوف","كسوف"], allow_add: "true"}
+      - {label: "وسوم", name: "tags", widget: "list", default: ["خسوف","كسوف"], allow_add: true}
       - {label: "الصورة", name: "image", widget: "select", options: ["images/lunar-partial.jpg","images/lunar-total.jpg","images/solar-partial.jpg","images/solar-total.jpg","images/solar-ring.jpg"]}
       - {label: "تاريخ الحدث", name: "eventDate", widget: "date"}
       - {label: "وصف مختصر للحدث", name: "description", widget: "string"}
