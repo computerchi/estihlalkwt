@@ -1,0 +1,76 @@
+<style>
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .announcement-box {
+        display: inline-block;
+        width: 40rem;
+        height: 40rem;
+        background-color: rgb(29, 73, 153);
+    }
+
+    .text-orange {
+        color: lightsalmon;
+    }
+
+    .bg-darkblue {
+        background-color: rgb(22, 59, 129);
+    }
+
+    .bg-orange {
+        background-color: lightsalmon;
+        height: 3px;
+        width: 90%;
+    }
+
+    .bg-poster {
+        height: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logo {
+        height: auto;
+        width: 65%;
+        margin: 3rem 3rem 1rem 1rem;
+    }
+</style>
+
+{{ $imgUrl := "../img/crescent_bg.jpg" | absURL }}
+<div class="container-fluid border bg-crescent announcement-box" style="background-image: url({{ $imgUrl }})">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                {{ $imgUrl := "../img/logo600.png" | absURL }}
+                <img src={{ $imgUrl }} class="d-inline-block logo" alt="Logo">
+            </div>
+            <div class="col-md-8 py-5">
+                <h2 class="text-center text-orange">تـعـلـن</h2>
+                <h3 class="text-center text-white display-5">اللجنة الكويتية المشتركة للاستهلال</h3>
+                <div class="container-fluid bg-orange"></div>
+            </div>
+        </div>
+
+        <div class="bg-darkblue">
+            <div class="container text-white py-3 mb-5">
+                <h4 class="display-5">انها {{.Params.goNoGo}} لتحري هلال شهر {{.Params.hijryMonth}} لعام
+                    {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
+                    {{.Params.dateOfSighting}}
+                    {{ if eq .Params.goNoGo "ستخرج"}}
+                    عند {{.Params.location}} في منطقة {{.Params.area}}
+                    {{ end }}
+                    بدولة الكويت.</h4>
+                <p>{{ .Params.body }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-md-8 text-white">
+                <h4 class="text-center">رئيس اللجنة</h4>
+                <h5 class="text-center">الشيخ صادق بو عباس</h5>
+            </div>
+        </div>
+    </div>
+</div>

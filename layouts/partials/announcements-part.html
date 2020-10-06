@@ -1,0 +1,19 @@
+<div>
+  {{ range (where .Site.Pages.ByPublishDate.Reverse "Section" "announcements") }}
+  {{ $today := now.Format "2006-01-02" }}
+  {{ if and (le $today .Params.expiryDate) ( eq .Kind "page") }}
+  <div class="card border-secondary">
+    <div class="card-header">
+      <h2> إعلان استهلال</h2>
+    </div>
+    <div class="card-body">
+      <a href="{{ .Permalink }}">
+        <h4 class="card-title">{{ .Title }}</h4>
+      </a>
+      {{ partial "announcements-simple.html" . }}
+    </div>
+  </div>
+  <br>
+  {{ end }}
+  {{ end }}
+</div>

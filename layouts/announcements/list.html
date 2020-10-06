@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<h1 class="section-header">اعلانات الاستهلال</h1>
+<p>{{ .Content }}</p>
+<div class="container">
+{{ range.Pages.ByPublishDate.Reverse }}
+<p>
+  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+  {{ partial "date-and-tags.html" . }}
+</p>
+{{ end }}
+</div>
+
+{{ partial "return-1-btn" . }}
+{{ end }}

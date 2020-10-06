@@ -79,6 +79,25 @@ collections:
       - {label: "موقع عودة", name: "odahHTML", widget: "string", default: "http://www.icoproject.org/icop.html"}
       - {label: "موقع يالوب", name: "yallopHTML", widget: "string", default: "http://astro.ukho.gov.uk/moonwatch/index.html"}
       - {label: "موقع شوكت", name: "shawkatHTML", widget: "string", default: "https://www.moonsighting.com/"}
+  - name: "announcements"
+    label: "اعلان استهلال"
+    folder: content/announcements
+    create: true
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
+    fields:
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "تاريخ انتهاء الصلاحية", name: "expiryDate", widget: "datetime"}
+      - {label: "قرار الخروج للاستهلال", name: "goNoGo", widget: "select", options: ["ستخرج","لن تخرج"]}
+      - {label: "الشهر الهجري", name: "hijryMonth", widget: "select", options: ["محرم", "صفر", "ربيع الاول", "ربيع الاخر", "جمادى الاولى", "جمادى الاخرة", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"]}
+      - {label: "السنة الهجرية", name: "hijryYear", widget: "number", default: 1442, valueType: "int", min: 1440, max: 1500}
+      - {label: "يوم الاستهلال", name: "dayOfSighting", widget: "select", options: ["السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة"]}
+      - {label: "تاريخ يوم الاستهلال", name: "dateOfSighting", widget: "string", default: "DD/MM/YYYY"}
+      - {label: "المكان", name: "location", widget: "string"}
+      - {label: "المنطقة", name: "area", widget: "string"}
+      - {label: "تفاصيل الرصد", name: "body", widget: "markdown"}
+      - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
+      - {label: "وسوم", name: "tags", widget: "list"}
   - name: "events"
     label: "حدث فلكي"
     folder: content/events

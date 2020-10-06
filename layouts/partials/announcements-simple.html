@@ -1,0 +1,10 @@
+<p>تعلن اللجنة الكويتية المشتركة للاستهلال انها {{.Params.goNoGo}} لتحري هلال شهر {{.Params.hijryMonth}} لعام
+    {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
+    {{.Params.dateOfSighting}}
+    {{ if eq .Params.goNoGo "ستخرج"}}
+    عند {{.Params.location}} في منطقة {{.Params.area}}
+    {{ end }}
+    بدولة الكويت.</p>
+<p>{{ .Params.body }}</p>
+<h4>رئيس اللجنة</h4>
+<h5>الشيخ صادق بو عباس</h5>

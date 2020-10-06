@@ -3,6 +3,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-9">
+      <!-- announcements -->
+      {{ partial "announcements-part.html" . }}
+
       <!-- ads -->
       {{ partial "ads-part.html" . }}
 
@@ -10,7 +13,7 @@
       <div>
         {{ partial "showntell-part.html" . }}
       </div>
-  <br>
+      <br>
 
       <!-- astro-flash -->
       {{ partial "astro-flash-part.html" . }}
