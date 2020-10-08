@@ -1,0 +1,28 @@
+<div class="card border-secondary">
+    <div class="card-header">
+        <h2>بيان {{ .Title }}</h2>
+    </div>
+    <div class="card-body">
+
+        <p>خرجت اللجنة الكويتية المشتركة للاستهلال لتحري هلال شهر {{.Params.hijryMonth}} لعام
+            {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
+            {{.Params.dateOfSighting}}
+            عند {{.Params.location}} في منطقة {{.Params.area}}
+            بدولة الكويت.</p>
+        <p><span><strong>{{ .Params.report }}</strong></span></p>
+        <br>
+        <div class="row">
+            <div class="col">
+                <br>
+                <a href="{{ .Permalink }}">
+                    <h4 class="card-title">بوستر البيان</h4>
+                </a>
+            </div>
+            <div class="col">
+                <h4>رئيس اللجنة</h4>
+                <h5>الشيخ صادق بو عباس</h5>
+            </div>
+        </div>
+
+    </div>
+</div>

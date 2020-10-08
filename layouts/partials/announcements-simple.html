@@ -1,10 +1,51 @@
-<p>تعلن اللجنة الكويتية المشتركة للاستهلال انها {{.Params.goNoGo}} لتحري هلال شهر {{.Params.hijryMonth}} لعام
-    {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
-    {{.Params.dateOfSighting}}
-    {{ if eq .Params.goNoGo "ستخرج"}}
-    عند {{.Params.location}} في منطقة {{.Params.area}}
-    {{ end }}
-    بدولة الكويت.</p>
-<p>{{ .Content }}</p>
-<h4>رئيس اللجنة</h4>
-<h5>الشيخ صادق بو عباس</h5>
+<div class="card border-secondary">
+    <div class="card-header">
+        <h2>اعلان {{ .Title }}</h2>
+    </div>
+    <div class="card-body">
+
+        <p>تعلن اللجنة الكويتية المشتركة للاستهلال انها {{.Params.announce}} لتحري هلال شهر {{.Params.hijryMonth}} لعام
+            {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
+            {{.Params.dateOfSighting}}
+            {{ if eq .Params.announce "ستخرج"}}
+            عند {{.Params.location}} في منطقة {{.Params.area}}
+            {{ end }}
+            بدولة الكويت.</p>
+        <p>الحسابات الفلكية للهلال عند غروب شمس بأفق مدينة الكويت</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>عمر الهلال ساعة</th>
+                    <th>الاضاءة بالالف</th>
+                    <th>الارتفاع درجة</th>
+                    <th>المكث دقيقة</th>
+                    <th>البعد الزاوي درجة</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{.Params.age}}</td>
+                    <td>{{.Params.illumination}}</td>
+                    <td>{{.Params.altitude}}</td>
+                    <td>{{.Params.stay}}</td>
+                    <td>{{.Params.elongation}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><u><span><strong>امكانية الرؤية: </strong></span>{{ .Params.verdict }}</u></p>
+        <br>
+        <div class="row">
+            <div class="col">
+                <br>
+                <a href="{{ .Permalink }}">
+                    <h4 class="card-title">بوستر الاعلان</h4>
+                </a>
+            </div>
+            <div class="col">
+                <h4>رئيس اللجنة</h4>
+                <h5>الشيخ صادق بو عباس</h5>
+            </div>
+        </div>
+
+    </div>
+</div>

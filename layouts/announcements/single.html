@@ -1,10 +1,16 @@
 {{ define "main" }}
 
 <h1 class="section-header">{{ .Title }}</h1>
-
-{{ partial "announcements-simple.html" . }}
 <br>
+{{ partial "poster-styles.html" . }}
+<h2>اعلان الاستهلال</h2>
 {{ partial "announcements-poster.html" . }}
+{{ if ne .Params.report "لم تخرج بعد"}}
+<br>
+<br>
+<h2>بيان الاستهلال</h2>
+{{ partial "report-poster.html" . }}
+{{ end }}
 
 {{ partial "return-2-btn.html" (dict "label" "اعلانات الاستهلال" "link" "announcements") }}
 
