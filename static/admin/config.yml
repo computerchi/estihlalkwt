@@ -92,7 +92,7 @@ collections:
       - {label: "الشهر الهجري", name: "hijryMonth", widget: "select", options: ["محرم", "صفر", "ربيع الاول", "ربيع الاخر", "جمادى الاولى", "جمادى الاخرة", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"]}
       - {label: "السنة الهجرية", name: "hijryYear", widget: "number", default: 1442, valueType: "int", min: 1440, max: 1500}
       - {label: "يوم الاستهلال", name: "dayOfSighting", widget: "select", options: ["السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة"]}
-      - {label: "تاريخ يوم الاستهلال", name: "dateOfSighting", widget: "string", default: "DD/MM/YYYY"}
+      - {label: "تاريخ يوم الاستهلال", name: "dateOfSighting", widget: "string", default: "YYYY/MM/DD"}
       - {label: "المكان", name: "location", widget: "string"}
       - {label: "المنطقة", name: "area", widget: "string"}
       - {label: "وقت الغروب", name: "sunset", widget: "string"}
@@ -102,9 +102,9 @@ collections:
       - {label: "مكث الهلال (دقيقة)", name: "stay", widget: "string"}
       - {label: "البعد الزاوي (درجة)", name: "elongation", widget: "string"}
       - {label: "امكانية رؤية الهلال", name: "verdict", widget: "string"}
-      - {label: "بيان الاستهلال", name: "report", widget: "select", options: ["لم تخرج","وقد تمكنت من رؤية الهلال بالعين المجردة وبالمناظير.","وقد تمكنت من رؤية الهلال بالمناظير فقط.","ولم تتمكن من رؤية الهلال لا بالعين المجردة ولا بالمناظير."]}
+      - {label: "بيان الاستهلال", name: "report", widget: "select", options: ["لم تخرج بعد","وقد تمكنت من رؤية الهلال بالعين المجردة وبالمناظير.","وقد تمكنت من رؤية الهلال بالمناظير فقط.","ولم تتمكن من رؤية الهلال لا بالعين المجردة ولا بالمناظير."]}
       - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
-      - {label: "وسوم", name: "tags", widget: "list"}
+      - {label: "وسوم", name: "tags", widget: "list", default: "استهلال"}
   - name: "events"
     label: "حدث فلكي"
     folder: content/events
