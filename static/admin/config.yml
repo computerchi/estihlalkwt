@@ -97,7 +97,7 @@ collections:
       - {label: "المنطقة", name: "area", widget: "string"}
       - {label: "وقت الغروب", name: "sunset", widget: "string"}
       - {label: "عمر الهلال (ساعة)", name: "age", widget: "string"}
-      - {label: "اضاءة الهلال (بالالف)", name: "illumination", widget: "string"}
+      - {label: "اضاءة الهلال (بالمائة)", name: "illumination", widget: "string"}
       - {label: "ارتفاع الهلال (درجة)", name: "altitude", widget: "string"}
       - {label: "مكث الهلال (دقيقة)", name: "stay", widget: "string"}
       - {label: "البعد الزاوي (درجة)", name: "elongation", widget: "string"}

@@ -2,18 +2,18 @@
 <div class="container-fluid bg-crescent announcement-box" style="background-image: url({{ $imgUrl }})">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-4">
                 {{ $imgUrl := "../img/logo600.png" | absURL }}
                 <img src={{ $imgUrl }} class="d-inline-block logo" alt="Logo">
             </div>
-            <div class="col-md-8 py-5">
+            <div class="col-8 py-5">
                 <h2 class="text-center text-orange">تـعـلـن</h2>
                 <h3 class="text-center text-white display-5">اللجنة الكويتية المشتركة للاستهلال</h3>
                 <div class="container-fluid line-orange"></div>
             </div>
         </div>
 
-        <div class="bg-darkblue hindi">
+        <div class="bg-darkblue">
             <div class="container text-white pt-3 pb-2 mb-4">
                 <h4 class="display-5">انها {{.Params.announce}} لتحري هلال شهر {{.Params.hijryMonth}} لعام
                     {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
@@ -25,23 +25,23 @@
                 <p>مواصفات الهلال عند غروب الشمس الساعة {{.Params.sunset}} مساء بأفق مدينة الكويت</p>
                 <div class="container">
                     <div class="row justify-content-around text-orange">
-                        <div class="col-md-2 text-center m-0 p-0">
+                        <div class="col-2 col-md-2 text-center m-0 p-0">
                             <p><strong>عمر&nbsp;الهلال</strong></p>
                             <p>{{.Params.age}}&nbsp;ساعة</p>
                         </div>
-                        <div class="col-md-2 text-center m-0 p-0">
+                        <div class="col-2 col-md-2 text-center m-0 p-0">
                             <p><strong>الاضاءة</strong></p>
-                            <p>{{.Params.illumination}}/1000</p>
+                            <p>%{{.Params.illumination}}</p>
                         </div>
-                        <div class="col-md-2 text-center m-0 p-0">
+                        <div class="col-2 col-md-2 text-center m-0 p-0">
                             <p><strong>البعد&nbsp;الزاوي</strong></p>
                             <p>{{.Params.elongation}}&nbsp;درجة</p>
                         </div>
-                        <div class="col-md-2 text-center m-0 p-0">
+                        <div class="col-2 col-md-2 text-center m-0 p-0">
                             <p><strong>الارتفاع</strong></p>
                             <p>{{.Params.altitude}}&nbsp;درجة</p>
                         </div>
-                        <div class="col-md-2 text-center m-0 p-0">
+                        <div class="col-2 col-md-2 text-center m-0 p-0">
                             <p><strong>المكث</strong></p>
                             <p>{{.Params.stay}}&nbsp;دقيقة</p>
                         </div>
@@ -52,13 +52,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 text-white">
+            <div class="col-6 text-white">
                 <h4 class="text-center">طبقا لحسابات الفلكي</h4>
                 <h5 class="text-center">المهندس محمد علي الصائغ</h5>
             </div>
-            <div class="col-md-6 text-white">
+            <div class="col-6 text-white">
                 <h4 class="text-center">رئيس اللجنة</h4>
-                <h5 class="text-center">الشيخ صادق بو عباس</h5>
+                <h5 class="text-center">الشيخ صادق بوعباس</h5>
             </div>
         </div>
     </div>

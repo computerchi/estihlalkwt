@@ -12,27 +12,29 @@
             {{ end }}
             بدولة الكويت.</p>
         <p>الحسابات الفلكية للهلال عند غروب شمس بأفق مدينة الكويت</p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>عمر الهلال ساعة</th>
-                    <th>الاضاءة بالالف</th>
-                    <th>الارتفاع درجة</th>
-                    <th>المكث دقيقة</th>
-                    <th>البعد الزاوي درجة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{.Params.age}}</td>
-                    <td>{{.Params.illumination}}</td>
-                    <td>{{.Params.altitude}}</td>
-                    <td>{{.Params.stay}}</td>
-                    <td>{{.Params.elongation}}</td>
-                </tr>
-            </tbody>
-        </table>
-        <p><u><span><strong>امكانية الرؤية: </strong></span>{{ .Params.verdict }}</u></p>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered text-center bg-light border">
+                <thead>
+                    <tr>
+                        <th>عمر الهلال</th>
+                        <th>الاضاءة</th>
+                        <th>البعد الزاوي</th>
+                        <th>الارتفاع</th>
+                        <th>المكث</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{.Params.age}}&nbsp;ساعة</td>
+                        <td>%{{.Params.illumination}}</td>
+                        <td>{{.Params.elongation}}&nbsp;درجة</td>
+                        <td>{{.Params.altitude}}&nbsp;درجة</td>
+                        <td>{{.Params.stay}}&nbsp;دقيقة</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4><span><strong>امكانية الرؤية: </strong></span>{{ .Params.verdict }}</h4>
         <br>
         <div class="row">
             <div class="col">
@@ -43,7 +45,7 @@
             </div>
             <div class="col">
                 <h4>رئيس اللجنة</h4>
-                <h5>الشيخ صادق بو عباس</h5>
+                <h5>الشيخ صادق بوعباس</h5>
             </div>
         </div>
 
