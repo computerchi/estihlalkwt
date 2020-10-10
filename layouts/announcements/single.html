@@ -1,8 +1,9 @@
 {{ define "main" }}
 
+<link rel="stylesheet" href="../../css/poster.css">
+
 <h1 class="section-header">{{ .Title }}</h1>
 <br>
-{{ partial "poster-styles.html" . }}
 <h2>اعلان الاستهلال</h2>
 {{ partial "announcements-poster.html" . }}
 {{ if ne .Params.report "لم تخرج بعد"}}
