@@ -87,7 +87,7 @@ collections:
     fields:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
-      - {label: "تاريخ انتهاء الصلاحية", name: "expiryDate", widget: "datetime"}
+      - {label: "تاريخ انتهاء الصلاحية", name: "expDate", widget: "datetime"}
       - {label: "قرار الخروج للاستهلال", name: "announce", widget: "select", default: "ستخرج", options: ["ستخرج","لن تخرج"]}
       - {label: "الشهر الهجري", name: "hijryMonth", widget: "select", options: ["محرم", "صفر", "ربيع الاول", "ربيع الاخر", "جمادى الاولى", "جمادى الاخرة", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"]}
       - {label: "السنة الهجرية", name: "hijryYear", widget: "number", default: 1442, valueType: "int", min: 1440, max: 1500}

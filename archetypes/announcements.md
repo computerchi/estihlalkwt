@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-expiryDate: {{ .Date }}
+expDate: {{ .Date }}
 announce: ستخرج
 hijryMonth: ""
 hijryYear: 1442
