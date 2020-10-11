@@ -10,9 +10,9 @@
             {{ if eq .Params.announce "ستخرج"}}
             عند {{.Params.location}} في منطقة {{.Params.area}}
             {{ end }}
-            بدولة الكويت.</p>
-        <p>الحسابات الفلكية للهلال عند غروب شمس بأفق مدينة الكويت</p>
-        <div class="table-responsive">
+            .</p>
+            <p>مواصفات الهلال عند غروب الشمس الساعة {{.Params.sunset}} مساء</p>
+            <div class="table-responsive">
             <table class="table table-sm table-bordered text-center bg-light border">
                 <thead>
                     <tr>
@@ -34,7 +34,6 @@
                 </tbody>
             </table>
         </div>
-        <h4><span><strong>امكانية الرؤية: </strong></span>{{ .Params.verdict }}</h4>
         <br>
         <div class="row">
             <div class="col">
