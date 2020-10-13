@@ -1,37 +1,65 @@
-h2 {
-  font-size: 2.5rem;
+:root {
+  --highlight-color: #ffd332;
+  --bg-color: rgba(15, 43, 95, 0.3);
+  --footer-color: rgb(179, 179, 179);
+  --footer-bg-color: rgba(61, 43, 88, 0.7);
 }
 
-.announcement-box {
+h2 {
+  font-size: 2.7rem;
+}
+
+.header-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.text-highlight {
+  color: var(--highlight-color);
+}
+
+.bg-highlight {
+  background-color: var(--highlight-color);
+  color: black;
+  border-radius: 8px;
+}
+
+.parent-box {
   display: inline-block;
   width: 40rem;
   height: 40rem;
-  background-color: rgb(29, 73, 153);
+  position: relative;
 }
 
-.text-orange {
-  color: rgb(169, 247, 250);
+.header-box {
+  position: absolute;
 }
 
-.bg-darkblue {
-  background-color: rgba(15, 43, 95, 0.3);
-  border-radius: 8px;
+.main-box {
+  position: absolute;
+  top: 14rem;
+  background-color: var(--bg-color);
 }
 
-.line-orange {
-  background-color: rgba(169, 247, 250, 0.9);
+.signature-box {
+  position: absolute;
+  top: 30rem;
+}
+
+.footer-box {
+  position: absolute;
+  top: 37rem;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-color);
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.5rem;
+  height: 48px;
+}
+
+.title-underline {
+  background-color: var(--highlight-color);
   height: 3px;
-  width: 90%;
-}
-
-.bg-orange {
-  color: black;
-  background-color: rgba(169, 247, 250, 0.9);
-  border-radius: 8px;
-}
-
-.bg-orange h3 {
-  line-height: 2.5rem;
+  width: 92%;
 }
 
 .bg-poster {
@@ -44,7 +72,7 @@ h2 {
 .logo {
   height: auto;
   width: 80%;
-  margin: 2rem 1.5rem 1rem 1rem;
+  margin: 2rem 2rem;
 }
 
 .row .col-md-2 p {
@@ -52,6 +80,6 @@ h2 {
 }
 
 .row .col-md-2 {
-  background-color: rgb(29, 73, 153);
+  background-color: var(--bg-color);
   border-radius: 8px;
 }
