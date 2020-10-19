@@ -4,14 +4,15 @@
 
 <h1 class="section-header">{{ .Title }}</h1>
 <br>
-<h2>اعلان الاستهلال</h2>
-{{ partial "announcements-poster.html" . }}
 {{ if ne .Params.report "لم تخرج بعد"}}
-<br>
-<br>
 <h2>بيان الاستهلال</h2>
 {{ partial "report-poster.html" . }}
+<br>
+<br>
+<br>
 {{ end }}
+<h2>اعلان الاستهلال</h2>
+{{ partial "announcements-poster.html" . }}
 
 {{ partial "return-2-btn.html" (dict "label" "الاستهلالات" "link" "announcements") }}
 

@@ -6,7 +6,7 @@
                 {{ $imgUrl := "../img/logo600.png" | absURL }}
                 <img src={{ $imgUrl }} class="d-inline-block logo" alt="Logo">
             </div>
-            <div class="col-7 py-5">
+            <div class="col-8 py-5">
                 <h2 class="text-center text-highlight mb-4">بـيـان</h2>
                 <h3 class="header-title text-center text-white">اللجنة الكويتية المشتركة للاستهلال</h3>
                 <div class="container title-underline"></div>
@@ -16,16 +16,16 @@
 
     <div class="main-box container-fluid">
         <div class="container text-white py-3">
-            <h4 class="display-5">خرجت اللجنة لتحري هلال شهر {{.Params.hijryMonth}} لعام
+            <p class="stress">خرجت اللجنة لتحري هلال شهر {{.Params.hijryMonth}} لعام
                 {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
                 {{.Params.dateOfSighting}}
-                عند {{.Params.location}} في منطقة {{.Params.area}}.</h4>
-            <br>
-            <div class="container bg-highlight text-center py-1">
+                عند {{.Params.location}} في منطقة {{.Params.area}}.</p>
+            <div class="container bg-highlight text-center py-1 mt-3">
                 <h3 class="display-5">
                     {{.Params.report}}
                 </h3>
             </div>
+            <p class="py-0 my-2"> {{.Params.comment}} </p>
         </div>
     </div>
 
