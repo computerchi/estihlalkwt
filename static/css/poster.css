@@ -85,7 +85,9 @@ h2 {
   height: 0.8rem;
 }
 
-.row .col-md-2 {
+.value-box {
   background-color: var(--bg-color);
   border-radius: 8px;
+  margin-bottom: .7rem;
+  font-size: 1.1rem;
 }
