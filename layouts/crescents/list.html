@@ -1,7 +1,6 @@
 {{ define "main" }}
 
 <h1 class="section-header">رصد الأهلة</h1>
-<h1></h1>
 <p>{{ .Content }}</p>
 <div class="container">
 {{ range.Pages.ByPublishDate.Reverse }}
@@ -11,8 +10,8 @@
             <img src="../img/crescent.jpg" alt="" class="rounded thumbnail"></a>
         </div>
         <div class="col-sm">
-          <a class="font-125 hindi" href="{{ .RelPermalink }}">هلال شهر {{.Params.hijryMonth}} {{.Params.hijryYear}} هجرية<br />
-            <b class="hindi"> أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} (حسب الرؤية المحتملة في دولة الكويت)</b>
+          <b><a class="hindi" href="{{ .RelPermalink }}">هلال شهر {{.Params.hijryMonth}} {{.Params.hijryYear}} هجرية<br /></b>
+            <p class="font-125 hindi"> أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} (حسب الرؤية المحتملة في دولة الكويت)</p>
             <!-- <p>{{ partial "date-only.html" . }}</p> -->
           </div>
       </div>
