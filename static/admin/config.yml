@@ -63,7 +63,7 @@ collections:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "مسودة", name: "draft", widget: "select", default: "false", options: ["true","false"]}
-      - {label: "الشهر الهجري", name: "hijryMonth", widget: "select", options: ["محرم", "صفر", "ربيع الاول", "ربيع الاخر", "جمادى الاولى", "جمادى الاخرة", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"]}
+      - {label: "الشهر الهجري", name: "hijryMonth", widget: "select", options: ["محرم", "صفر", "ربيع الاول", "ربيع الاخر", "جمادى الاولى", "جمادى الاخرة", "رجب", "شعبان", "رمضان", "شوال", "ذي القعدة", "ذي الحجة"]}
       - {label: "السنة الهجرية", name: "hijryYear", widget: "number", default: 1440, valueType: "int", min: 1440, max: 1500}
       - {label: "اليوم الاول", name: "firstDayName", widget: "select", options: ["السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة"]}
       - {label: "تاريخ اليوم الاول", name: "firstDayDate", widget: "string", default: "DD/MM/YYYY"}
@@ -90,7 +90,7 @@ collections:
       - {label: "تاريخ انتهاء الصلاحية", name: "expDate", widget: "datetime"}
       - {label: "قرار الخروج للاستهلال", name: "announce", widget: "select", default: "ستخرج", options: ["ستخرج","لن تخرج"]}
       - {label: "سبب عدم الخروج", name: "notGoingComment", widget: "string"}
-      - {label: "الشهر الهجري", name: "hijryMonth", widget: "select", options: ["محرم", "صفر", "ربيع الاول", "ربيع الاخر", "جمادى الاولى", "جمادى الاخرة", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"]}
+      - {label: "الشهر الهجري", name: "hijryMonth", widget: "select", options: ["محرم", "صفر", "ربيع الاول", "ربيع الاخر", "جمادى الاولى", "جمادى الاخرة", "رجب", "شعبان", "رمضان", "شوال", "ذي القعدة", "ذي الحجة"]}
       - {label: "السنة الهجرية", name: "hijryYear", widget: "number", default: 1442, valueType: "int", min: 1440, max: 1500}
       - {label: "يوم الاستهلال", name: "dayOfSighting", widget: "select", options: ["السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة"]}
       - {label: "تاريخ يوم الاستهلال", name: "dateOfSighting", widget: "string", default: "YYYY/MM/DD"}
