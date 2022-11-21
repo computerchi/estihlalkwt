@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "اللجنة الكويتية المشتركة للاستهلال"
 summaryLength = 10
 preserveTaxonomyNames = true
+ignoreErrors = ["error-missing-instagram-accesstoken"]
 
 [permalinks]
   blog = "/:filename"
