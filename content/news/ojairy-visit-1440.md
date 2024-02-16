@@ -15,5 +15,5 @@ draft: false
 {{< figure src="../../albums/album011/15922db9-6ce6-4871-928a-947a717af483.jpg" >}}
 {{< figure src="../../albums/album011/bc10c1b7-131e-4994-9569-8d6174e12311.jpg" >}}
 
-{{< instagram ByOPaAVATa9 >}}
+
 
