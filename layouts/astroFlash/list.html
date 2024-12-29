@@ -9,7 +9,7 @@
       <div class="container">
       {{ range.Pages.ByPublishDate.Reverse }}
       
-      <div class="row">
+        <div class="row">
           <div class="col-sm">
             <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a><br />
             كتبها: {{ .Params.author | markdownify }} 
