@@ -4,12 +4,12 @@
   <div class="row">
 
     <div class="col-md-9">
-      <h1 class="section-header"> جداول المكث</h1>
-      <p>جداول لمدن منتقاة توضح مدة مكث الهلال بعد مغيب الشمس في يوم الاستهلال.</p>
+      <h1 class="section-header"> أوقات الصلاة</h1>
+      <p>أوقات الصلاة في مجموعة منتقاة من المدن العالمية.</p>
       
           {{ range.Pages.ByPublishDate.Reverse }}
       <p>
-      <a class="font-125" href="/makth_tables/PDF/{{ .Params.file }}">{{ .Title }}</a>
+      <a class="font-125" href="/prayer_times/PDF/{{ .Params.file }}">{{ .Title }}</a>
       <hr />
     </p>
     {{ end }}
