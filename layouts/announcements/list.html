@@ -1,15 +1,31 @@
 {{ define "main" }}
 
-<h1 class="section-header"> الاستهلالات</h1>
-<p>{{ .Content }}</p>
 <div class="container">
-{{ range.Pages.ByPublishDate.Reverse }}
-<p>
-  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a><br />
-  {{ partial "date-and-tags.html" . }}
-</p>
-{{ end }}
+  <div class="row">
+
+    <div class="col-md-9">
+      <h1 class="section-header"> الاستهلالات</h1>
+      <p>{{ .Content }}</p>
+      
+      {{ range.Pages.ByPublishDate.Reverse }}
+      <p>
+        <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+        {{ partial "date-and-tags.html" . }}
+      </p>
+      {{ end }}
+    </div>
+
+    <aside class="col-md-3">
+
+      <!-- side buttons -->
+      <div id="desktop-side-buttons">
+        {{ partial "side-buttons.html" . }}
+      </div>
+
+    </aside>
+  </div>
 </div>
+
 
 {{ partial "return-1-btn" . }}
 {{ end }}

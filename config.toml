@@ -10,17 +10,17 @@ ignoreErrors = ["error-missing-instagram-accesstoken"]
 
 # See https://feathericons.com/
 # The value of pre is the icon name
-[menu]
-  [[menu.main]]
-    name = "الصفحة الرئيسية"
-    pre = "home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "رصد الاهلة"
-    pre = "moon"
-    url = "/crescents/"
-    weight = 2
+# [menu]
+  # [[menu.main]]
+  #   name = "الصفحة الرئيسية"
+  #   pre = "home"
+  #   url = "/"
+  #   weight = 1
+  # [[menu.main]]
+  #   name = "رصد الاهلة"
+  #   pre = "moon"
+  #   url = "/crescents/"
+  #   weight = 2
   # [[menu.main]]
   #   name = "ألبوم الصور"
   #   pre = "camera"

@@ -1,24 +1,40 @@
 {{ define "main" }}
 
-<h1 class="section-header">رصد الأهلة</h1>
-<p>{{ .Content }}</p>
 <div class="container">
-{{ range.Pages.ByPublishDate.Reverse }}
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-2">
-        <a class="hindi" href="{{ .RelPermalink }}"><img src="../img/crescent.jpg" alt="" class="rounded thumbnail"></a>
+  <div class="row">
+
+    <div class="col-md-9">
+      <h1 class="section-header">رصد الأهلة</h1>
+      <p>{{ .Content }}</p>
+      
+      {{ range.Pages.ByPublishDate.Reverse }}
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2">
+            <a class="hindi" href="{{ .RelPermalink }}"><img src="../img/crescent.jpg" alt="" class="rounded thumbnail"></a>
+          </div>
+          <div class="col-sm">
+            <b><a class="hindi" href="{{ .RelPermalink }}">هلال شهر {{.Params.hijryMonth}} {{.Params.hijryYear}} هجرية</a><br /></b>
+            <p class="font-125 hindi"> أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} (حسب الرؤية المحتملة في دولة الكويت)</p>
+            <!-- <p>{{ partial "date-only.html" . }}</p> -->
+          </div>
+        </div>
       </div>
-      <div class="col-sm">
-        <b><a class="hindi" href="{{ .RelPermalink }}">هلال شهر {{.Params.hijryMonth}} {{.Params.hijryYear}} هجرية</a><br /></b>
-        <p class="font-125 hindi"> أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} (حسب الرؤية المحتملة في دولة الكويت)</p>
-        <!-- <p>{{ partial "date-only.html" . }}</p> -->
-      </div>
+      <hr>
+      {{ end }}
     </div>
+
+    <aside class="col-md-3">
+
+      <!-- side buttons -->
+      <div id="desktop-side-buttons">
+        {{ partial "side-buttons.html" . }}
+      </div>
+
+    </aside>
   </div>
-  <hr>
-  {{ end }}
 </div>
+
 
 {{ partial "return-1-btn" . }}
 {{ end }}

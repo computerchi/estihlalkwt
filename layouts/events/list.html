@@ -1,20 +1,38 @@
 {{ define "main" }}
 
-<h1 class="section-header">الاحداث الفلكية</h1>
-<p>{{ .Content }}</p>
+
 <div class="container">
-  {{ range (.Pages.ByParam "eventDate").Reverse }}
   <div class="row">
-    <div class="col-sm-2">
-        <a class="font-125" href="{{ .RelPermalink }}"><img src="{{ .Params.image }}" class="thumbnail rounded" alt=""></a>
+
+    <div class="col-md-9">
+      <h1 class="section-header">الاحداث الفلكية</h1>
+      <p>{{ .Content }}</p>
+    
+      {{ range (.Pages.ByParam "eventDate").Reverse }}
+      <div class="row">
+        <div class="col-sm-2">
+            <a class="font-125" href="{{ .RelPermalink }}"><img src="{{ .Params.image }}" class="thumbnail rounded" alt=""></a>
+        </div>
+        <div class="col-sm">
+            <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> <br>
+            {{ .Params.description | markdownify }}
+        </div>
+      </div>
+      <hr>
+      {{ end }}
     </div>
-    <div class="col-sm">
-        <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a> <br>
-        {{ .Params.description | markdownify }}
-    </div>
+  
+
+    <aside class="col-md-3">
+
+      <!-- side buttons -->
+      <div id="desktop-side-buttons">
+        {{ partial "side-buttons.html" . }}
+      </div>
+
+    </aside>
   </div>
-  <hr>
-  {{ end }}
 </div>
+
 {{ partial "return-1-btn" . }}
 {{ end }}

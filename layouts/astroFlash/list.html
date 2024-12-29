@@ -1,20 +1,39 @@
 {{ define "main" }}
 
-<h1 class="section-header">اضاءات فلكية</h1>
-<p>{{ .Content }}</p>
 <div class="container">
-  {{ range.Pages.ByPublishDate.Reverse }}
   <div class="row">
-    <div class="col-sm">
-      <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a><br />
-      كتبها: {{ .Params.author | markdownify }} 
+
+    <div class="col-md-9">
+      <h1 class="section-header">اضاءات فلكية</h1>
+      {{ .Content }}
+      <div class="container">
+      {{ range.Pages.ByPublishDate.Reverse }}
+      
+      <div class="row">
+          <div class="col-sm">
+            <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+            كتبها: {{ .Params.author | markdownify }} 
+          </div>
+          <div class="col-sm">
+            {{ partial "date-and-tags.html" . }}
+          </div>
+        </div>
+        <hr>
+      
+      {{ end }}
+      </div>
+          
     </div>
-    <div class="col-sm">
-      {{ partial "date-and-tags.html" . }}
-    </div>
+
+    <aside class="col-md-3">
+
+      <!-- side buttons -->
+      <div id="desktop-side-buttons">
+        {{ partial "side-buttons.html" . }}
+      </div>
+
+    </aside>
   </div>
-  <hr>
-  {{ end }}
 </div>
 
 {{ partial "return-1-btn" . }}

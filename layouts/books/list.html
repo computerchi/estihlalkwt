@@ -1,46 +1,63 @@
 {{ define "main" }}
-<h1 class="section-header">المكتبة</h1>
 
-{{ range.Pages.ByPublishDate }}
+<div class="container">
+  <div class="row">
 
-<div class="card-group">
-  <div class="card ">
-    <div class="card-body">
-      <h5 class="card-title">{{ .Title }}</h5>
+    <div class="col-md-9">
+      <h1 class="section-header">المكتبة</h1>
+      {{ range.Pages.ByPublishDate }}
 
-      <table class="table">
-        <tbody>
-          <tr>
-            <td>المؤلف</td>
-            <td>{{ .Params.author }}</td>
-          </tr>
-          <tr>
-            <td>سنة النشر</td>
-            <td>{{ .Params.yearPublished }}</td>
-          </tr>
-          <tr>
-            <td>الناشر</td>
-            <td>{{ .Params.publisher }}</td>
-          </tr>
-          <tr>
-            <td>عدد الصفحات</td>
-            <td>{{ .Params.pageCount }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="card-group">
+        <div class="card ">
+          <div class="card-body">
+            <h5 class="card-title">{{ .Title }}</h5>
+      
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>المؤلف</td>
+                  <td>{{ .Params.author }}</td>
+                </tr>
+                <tr>
+                  <td>سنة النشر</td>
+                  <td>{{ .Params.yearPublished }}</td>
+                </tr>
+                <tr>
+                  <td>الناشر</td>
+                  <td>{{ .Params.publisher }}</td>
+                </tr>
+                <tr>
+                  <td>عدد الصفحات</td>
+                  <td>{{ .Params.pageCount }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer">
+            <a href="/books/PDF/{{ .Params.file }}" class="btn btn-primary" style="padding: 0 10px;">الكتاب</a>
+          </div>
+        </div>
+      
+        {{ $src := print "/books/thumbnail/" .Params.thumbnail }}
+          <img class="card-img-top book-img-size" src={{ $src }} alt="صورة الكتاب غير متوفرة" />
+      
+        </div>
+      <br>
+      
+      {{ end }}
     </div>
-    <div class="card-footer">
-      <a href="/books/PDF/{{ .Params.file }}" class="btn btn-primary" style="padding: 0 10px;">الكتاب</a>
-    </div>
+
+    <aside class="col-md-3">
+
+      <!-- side buttons -->
+      <div id="desktop-side-buttons">
+        {{ partial "side-buttons.html" . }}
+      </div>
+
+    </aside>
   </div>
+</div>
 
-  {{ $src := print "/books/thumbnail/" .Params.thumbnail }}
-    <img class="card-img-top book-img-size" src={{ $src }} alt="صورة الكتاب غير متوفرة" />
-
-  </div>
-<br>
-
-{{ end }}
 
 {{ partial "return-1-btn" . }}
 {{ end }}

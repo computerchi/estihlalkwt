@@ -1,14 +1,33 @@
 {{ define "main" }}
 
-<h1 class="section-header">روابط علمية</h1>
-<br>
+
 <div class="container">
-      {{ range sort .Pages ".Weight" }}
-      <h6>
-      <a class="font-125" href="{{ .Params.link }}" ><i data-feather="external-link"></i>&nbsp;{{ .Title }}</a>
-      </h6>
-      {{ end }}
+      <div class="row">
+
+            <div class="col-md-9">
+                  <h1 class="section-header">روابط علمية</h1>
+                  <br>
+                  <div class="container">
+                        {{ range sort .Pages ".Weight" }}
+                        <h6>
+                        <a class="font-125" href="{{ .Params.link }}" ><i data-feather="external-link"></i>&nbsp;{{ .Title }}</a>
+                        </h6>
+                        {{ end }}
+                  </div>
+                              
+            </div>
+
+            <aside class="col-md-3">
+
+                  <!-- side buttons -->
+                  <div id="desktop-side-buttons">
+                  {{ partial "side-buttons.html" . }}
+                  </div>
+
+            </aside>
+      </div>
 </div>
+    
 
 {{ partial "return-1-btn" . }}
 {{ end }}
