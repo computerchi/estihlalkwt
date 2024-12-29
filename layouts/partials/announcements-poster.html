@@ -55,13 +55,11 @@
                     <br>
                     <h4 class="display-5">يوم {{.Params.dayOfSighting}}
                         {{.Params.dateOfSighting}}</h4>
-                    <h4 class="display-5">
                         {{ if eq .Params.announce "ستخرج"}}
-                        {{.Params.location}}
+                        <p>{{.Params.location}}</p>
                         {{ else }}
-                        {{.Params.notGoingComment}}
+                        <P>{{.Params.notGoingComment}}</P>
                         {{ end }}
-                    </h4>
                     <br>
                     <div class="container text-white">
                         <h4>رئيس اللجنة</h4>
