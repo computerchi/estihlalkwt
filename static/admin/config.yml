@@ -94,8 +94,8 @@ collections:
       - {label: "السنة الهجرية", name: "hijryYear", widget: "number", default: 1442, valueType: "int", min: 1440, max: 1500}
       - {label: "يوم الاستهلال", name: "dayOfSighting", widget: "select", options: ["السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة"]}
       - {label: "تاريخ يوم الاستهلال", name: "dateOfSighting", widget: "string", default: "YYYY/MM/DD"}
-      - {label: "المكان", name: "location", widget: "string"}
-      - {label: "المنطقة", name: "area", widget: "string"}
+      - {label: "المكان", name: "location", widget: "textarea"}
+      - {label: "المنطقة", name: "area", widget: "string", default: "."}
       - {label: "وقت الغروب", name: "sunset", widget: "string"}
       - {label: "عمر الهلال (ساعة)", name: "age", widget: "string"}
       - {label: "اضاءة الهلال (بالمائة)", name: "illumination", widget: "string"}
