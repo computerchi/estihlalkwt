@@ -57,7 +57,7 @@
                         {{.Params.dateOfSighting}}</h4>
                     <h4 class="display-5">
                         {{ if eq .Params.announce "ستخرج"}}
-                        عند {{.Params.location}} في منطقة {{.Params.area}}.
+                        {{.Params.location}}
                         {{ else }}
                         {{.Params.notGoingComment}}
                         {{ end }}
