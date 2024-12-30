@@ -54,11 +54,13 @@
                     <h3 class="display-5">شهر {{.Params.hijryMonth}} لعام {{.Params.hijryYear}}هـ</h3>
                     <br>
                     <h4 class="display-5">يوم {{.Params.dayOfSighting}}
-                        {{.Params.dateOfSighting}}</h4>
+                        {{.Params.dateOfSighting}} الى:</h4>
                         {{ if eq .Params.announce "ستخرج"}}
                         <p>{{.Params.location}}</p>
+                        <p>{{ if ne .Params.location2 "."}}{{.Params.location2}}{{ end }}</p>
+                        <p>{{ if ne .Params.location3 "."}}{{.Params.location3}}{{ end }}</p>
                         {{ else }}
-                        <P>{{.Params.notGoingComment}}</P>
+                        <p>{{ if ne .Params.notGoingComment "."}}{{.Params.notGoingComment}}{{ end }}</p>
                         {{ end }}
                     <br>
                     <div class="container text-white">

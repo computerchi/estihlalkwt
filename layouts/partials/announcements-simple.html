@@ -6,14 +6,14 @@
 
         <p>تعلن اللجنة الكويتية المشتركة للاستهلال انها {{.Params.announce}} لتحري هلال شهر {{.Params.hijryMonth}} لعام
             {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
-            {{.Params.dateOfSighting}}
+            {{.Params.dateOfSighting}} الى:</p>
+
             {{ if eq .Params.announce "ستخرج"}}
-            {{.Params.location}}
-            {{.Params.area}}
-            {{.Params.location3}}
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location}}</p>
+            <p>{{ if ne .Params.location2 "."}}&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location2}}{{ end }}</p>
+            <p>{{ if ne .Params.location3 "."}}&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location3}}{{ end }}</p>
             {{ end }}
-            .</p>
-            <p>{{.Params.notGoingComment}}</p>
+            <p>{{ if ne .Params.notGoingComment "."}}{{.Params.notGoingComment}}{{ end }}</p>
             <p>مواصفات الهلال عند غروب الشمس الساعة {{.Params.sunset}} مساء</p>
             <div class="table-responsive">
             <table class="table table-sm table-bordered text-center bg-light border">

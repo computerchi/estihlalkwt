@@ -6,8 +6,12 @@
 
         <p>خرجت اللجنة الكويتية المشتركة للاستهلال لتحري هلال شهر {{.Params.hijryMonth}} لعام
             {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
-            {{.Params.dateOfSighting}}
-            {{.Params.location}}</p>
+            {{.Params.dateOfSighting}} الى:</p>
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location}}</p>
+            <p>{{ if ne .Params.location2 "."}}&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location2}}{{ end }}</p>
+            <p>{{ if ne .Params.location3 "."}}&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location3}}{{ end }}</p>
+
         <h4><span><strong>{{ .Params.report }}</strong></span></h4>
         <p> {{.Params.reportComment}} </p>
         <br>

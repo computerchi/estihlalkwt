@@ -95,8 +95,8 @@ collections:
       - {label: "يوم الاستهلال", name: "dayOfSighting", widget: "select", options: ["السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة"]}
       - {label: "تاريخ يوم الاستهلال", name: "dateOfSighting", widget: "string", default: "YYYY/MM/DD"}
       - {label: "المكان 1", name: "location", widget: "string"}
-      - {label: "المكان 2", name: "area", widget: "string", default: "."}
-      - {label: "المكان 3", name: "location3", widget: "string"}
+      - {label: "المكان 2", name: "location2", widget: "string", default: "."}
+      - {label: "المكان 3", name: "location3", widget: "string", default: "."}
       - {label: "وقت الغروب", name: "sunset", widget: "string"}
       - {label: "عمر الهلال (ساعة)", name: "age", widget: "string"}
       - {label: "اضاءة الهلال (بالمائة)", name: "illumination", widget: "string"}
