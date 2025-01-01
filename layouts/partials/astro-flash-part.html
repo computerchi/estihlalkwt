@@ -1,5 +1,5 @@
 <div>
-    <h3 class="section-header">اضاءة فلكية</h3>
+    <h3 class="section-header">اضاءات فلكية</h3>
     {{ range first 2 (where .Site.Pages.ByPublishDate.Reverse "Section" "astroFlash") }}
     {{ if eq .Kind "page" }}
     <article class="container">

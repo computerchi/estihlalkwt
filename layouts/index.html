@@ -15,11 +15,11 @@
       </div>
       <br>
 
-      <!-- astro-flash -->
-      {{ partial "astro-flash-part.html" . }}
-
       <!-- news -->
       {{ partial "news-part.html" . }}
+
+      <!-- astro-flash -->
+      {{ partial "astro-flash-part.html" . }}
 
       <!-- survey -->
 
@@ -35,6 +35,12 @@
         <hr />
       </div>
 
+      <!-- Crescent sighting -->
+      <div>
+        {{ partial "crescents-part.html" . }}
+      </div>
+      <hr>
+
       <!-- tags -->
       <div class="container">
         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
@@ -45,17 +51,11 @@
       </div>
       <hr />
 
-      <!-- Crescent sighting -->
-      <div>
-        {{ partial "crescents-part.html" . }}
-      </div>
-      <hr>
-
       <!-- latest books -->
-      <div>
+      <!-- <div>
         {{ partial "latest-books-part.html" . }}
       </div>
-      <hr>
+      <hr> -->
 
     </aside>
   </div>

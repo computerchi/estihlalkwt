@@ -6,13 +6,10 @@
   {{ if eq .Kind "page" }}
   <article class="container bottom-shadow">
     <h4> 
-        {{ .Params.hijryMonth }}
+      <a href="{{ .Permalink }}">{{ .Params.hijryMonth }}</a>
     </h4>
       <div>
          أوّل أيّام شهر {{.Params.hijryMonth}} هو يوم {{ .Params.firstDayName }} {{ .Params.firstDayDate }} 
-        <a href="{{ .Permalink }}">
-         التفاصيل
-        </a>
     </div>
     <br />
   </article>

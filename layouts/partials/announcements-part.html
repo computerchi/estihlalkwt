@@ -1,6 +1,7 @@
 <div>
-  {{ range (where .Site.Pages.ByPublishDate.Reverse "Section" "announcements") }}
   {{ $today := now.Format "2006-01-02" }}
+  {{ if le $today $.Params.expDate }}
+  {{ range (where .Site.Pages.ByPublishDate.Reverse "Section" "announcements") }}
   {{ if and (le $today .Params.expDate) ( eq .Kind "page") }}
   {{ if eq .Params.report "لم تخرج بعد"}}
   {{ partial "announcements-simple.html" . }}
@@ -8,6 +9,7 @@
   {{ partial "report-simple.html" . }}
   {{ end }}
   <br>
+  {{ end }}
   {{ end }}
   {{ end }}
 </div>

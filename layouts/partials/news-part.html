@@ -1,6 +1,6 @@
 <div>
-  <h3 class="section-header">أخبار</h3>
-  {{ range first 5 (where .Site.Pages.ByPublishDate.Reverse "Section" "news") }}
+  <h3 class="section-header">الأخبار</h3>
+  {{ range first 3 (where .Site.Pages.ByPublishDate.Reverse "Section" "news") }}
   {{ if eq .Kind "page" }}
   <article class="container">
     <h4>
