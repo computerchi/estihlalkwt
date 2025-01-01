@@ -13,7 +13,7 @@
             <p>{{ if ne .Params.location3 "."}}&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location3}}{{ end }}</p>
 
         <h4><span><strong>{{ .Params.report }}</strong></span></h4>
-        <p> {{.Params.reportComment}} </p>
+        <p>{{ if ne .Params.reportComment "."}}{{.Params.reportComment}}{{ end }}</p>
         <br>
         <div class="row">
             <div class="col">
