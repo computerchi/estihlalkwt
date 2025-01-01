@@ -17,55 +17,28 @@
     <div class="main-box container-fluid">
         <div class="container text-white py-3">
             <div class="row">
-                <div class="col-4 container text-highlight">
-                    <div class="value-box row">
-                        <div class="col-6"><strong>الغروب</strong></div>
-                        <div class="col-6">{{.Params.sunset}}&nbsp;مساء</div>
-                    </div>
-                    <div class="value-box row">
-                        <div class="col-6"><strong>عمر&nbsp;الهلال</strong></div>
-                        <div class="col-6">{{.Params.age}}&nbsp;ساعة</div>
-                    </div>
-                    <div class="value-box row">
-                        <div class="col-6"><strong>الاضاءة</strong></div>
-                        <div class="col-6">%{{.Params.illumination}}</div>
-                    </div>
-                    <div class="value-box row">
-                        <div class="col-6"><strong>البعد&nbsp;الزاوي</strong></div>
-                        <div class="col-6">{{.Params.elongation}}&nbsp;درجة</div>
-                    </div>
-                    <div class="value-box row">
-                        <div class="col-6"><strong>الارتفاع</strong></div>
-                        <div class="col-6">{{.Params.altitude}}&nbsp;درجة</div>
-                    </div>
-                    <div class="value-box row">
-                        <div class="col-6"><strong>المكث</strong></div>
-                        <div class="col-6">{{.Params.stay}}&nbsp;دقيقة</div>
-                    </div>
-                    <div class="value-box row text-center">
-                        <div class="col-12">وفق حسابات تقويم الصائغ</div>
-                    </div>
-                    <div class="value-box row text-center">
-                        <div class="col-12"><strong>للفلكي م. محمد علي الصائغ</strong></div>
-                    </div>
-                </div>
+                {{ partial "crescent-data.html" . }}
                 <div class="col-8 text-center">
                     <h3 class="display-5">انها {{.Params.announce}} لتحري هلال</h3>
                     <h3 class="display-5">شهر {{.Params.hijryMonth}} لعام {{.Params.hijryYear}}هـ</h3>
                     <br>
-                    <h4 class="display-5">يوم {{.Params.dayOfSighting}}
-                        {{.Params.dateOfSighting}} الى:</h4>
+                    <h4 class="display-5">وذلك في يوم {{.Params.dayOfSighting}}
+                        {{.Params.dateOfSighting}}
                         {{ if eq .Params.announce "ستخرج"}}
-                        <p>{{.Params.location}}</p>
-                        <p>{{ if ne .Params.location2 "."}}{{.Params.location2}}{{ end }}</p>
-                        <p>{{ if ne .Params.location3 "."}}{{.Params.location3}}{{ end }}</p>
+                         الى:</h4>
+                            <ul style= "text-align: right; list-style-type: circle;">
+                                <li>{{.Params.location}}</li>
+                                {{ if ne .Params.location2 "."}}<li>{{.Params.location2}}</li>{{ end }}
+                                {{ if ne .Params.location3 "."}}<li>{{.Params.location3}}</li>{{ end }}
+                            </ul>
                         {{ else }}
+                        .</h4>
                         <p>{{ if ne .Params.notGoingComment "."}}{{.Params.notGoingComment}}{{ end }}</p>
                         {{ end }}
                     <br>
                     <div class="container text-white">
-                        <h4>رئيس اللجنة</h4>
-                        <h5>الشيخ صادق بوعباس</h5>
+                        <h5>رئيس اللجنة</h5>
+                        <h4>الشيخ صادق بوعباس</h4>
                     </div>
                 </div>
             </div>

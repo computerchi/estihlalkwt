@@ -19,10 +19,12 @@
             <p class="stress">خرجت اللجنة لتحري هلال شهر {{.Params.hijryMonth}} لعام
                 {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
                 {{.Params.dateOfSighting}} الى:</p>
-                <p>{{.Params.location}}</p>
-                <p>{{ if ne .Params.location2 "."}}{{.Params.location2}}{{ end }}</p>
-                <p>{{ if ne .Params.location3 "."}}{{.Params.location3}}{{ end }}</p>
-    
+                <ul>
+                    <li>{{.Params.location}}</li>
+                    {{ if ne .Params.location2 "."}}<li>{{.Params.location2}}</li>{{ end }}
+                    {{ if ne .Params.location3 "."}}<li>{{.Params.location3}}</li>{{ end }}
+                </ul>
+            
             <div class="container bg-highlight text-center py-1 mt-3">
                 <h3 class="display-5">
                     {{.Params.report}}
@@ -38,8 +40,8 @@
             <div class="col-5 text-white">
             </div>
             <div class="col-5 text-white">
-                <h4>رئيس اللجنة</h4>
-                <h5>الشيخ صادق بوعباس</h5>
+                <h5>رئيس اللجنة</h5>
+                <h4>الشيخ صادق بوعباس</h4>
             </div>
             <div class="col"></div>
         </div>

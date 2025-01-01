@@ -90,4 +90,10 @@ h2 {
   border-radius: 8px;
   margin-bottom: .7rem;
   font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.value-box hr {
+  margin: 4px;
+  border: .1px dotted #f5f5f555;
 }

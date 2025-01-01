@@ -5,13 +5,18 @@
     <div class="card-body">
 
         <p>تعلن اللجنة الكويتية المشتركة للاستهلال انها {{.Params.announce}} لتحري هلال شهر {{.Params.hijryMonth}} لعام
-            {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
-            {{.Params.dateOfSighting}} الى:</p>
+            {{.Params.hijryYear}}هـ وذلك في يوم {{.Params.dayOfSighting}}
+            {{.Params.dateOfSighting}}
 
             {{ if eq .Params.announce "ستخرج"}}
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location}}</p>
-            <p>{{ if ne .Params.location2 "."}}&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location2}}{{ end }}</p>
-            <p>{{ if ne .Params.location3 "."}}&nbsp;&nbsp;&nbsp;&nbsp;- {{.Params.location3}}{{ end }}</p>
+             الى:</p>
+            <ul>
+                <li>{{.Params.location}}</li>
+                {{ if ne .Params.location2 "."}}<li>{{.Params.location2}}</li>{{ end }}
+                {{ if ne .Params.location3 "."}}<li>{{.Params.location3}}</li>{{ end }}
+            </ul>
+            {{ else }}
+            .
             {{ end }}
             <p>{{ if ne .Params.notGoingComment "."}}{{.Params.notGoingComment}}{{ end }}</p>
             <p>مواصفات الهلال عند غروب الشمس الساعة {{.Params.sunset}} مساء</p>
