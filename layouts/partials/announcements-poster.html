@@ -23,16 +23,13 @@
                     <h3 class="display-5">شهر {{.Params.hijryMonth}} لعام {{.Params.hijryYear}}هـ</h3>
                     <br>
                     <h4 class="display-5">وذلك في يوم {{.Params.dayOfSighting}}
-                        {{.Params.dateOfSighting}}
+                        {{.Params.dateOfSighting}}</h4>
                         {{ if eq .Params.announce "ستخرج"}}
-                         الى:</h4>
-                            <ul style= "text-align: right; list-style-type: circle;">
+                            <ul style= "text-align: right; list-style-type: none;">
                                 <li>{{.Params.location}}</li>
                                 {{ if ne .Params.location2 "."}}<li>{{.Params.location2}}</li>{{ end }}
                                 {{ if ne .Params.location3 "."}}<li>{{.Params.location3}}</li>{{ end }}
                             </ul>
-                        {{ else }}
-                        .</h4>
                         <p>{{ if ne .Params.notGoingComment "."}}{{.Params.notGoingComment}}{{ end }}</p>
                         {{ end }}
                     <br>

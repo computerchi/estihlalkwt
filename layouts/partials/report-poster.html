@@ -18,8 +18,8 @@
         <div class="container text-white py-3">
             <p class="stress">خرجت اللجنة لتحري هلال شهر {{.Params.hijryMonth}} لعام
                 {{.Params.hijryYear}}هـ يوم {{.Params.dayOfSighting}}
-                {{.Params.dateOfSighting}} الى:</p>
-                <ul>
+                {{.Params.dateOfSighting}}</p>
+                <ul style= "text-align: right; list-style-type: none;">
                     <li>{{.Params.location}}</li>
                     {{ if ne .Params.location2 "."}}<li>{{.Params.location2}}</li>{{ end }}
                     {{ if ne .Params.location3 "."}}<li>{{.Params.location3}}</li>{{ end }}
