@@ -2,7 +2,7 @@
     <h1 >اضاءات فلكية</h1>
     {{ range first 2 (where .Site.Pages.ByPublishDate.Reverse "Section" "astroFlash") }}
     {{ if eq .Kind "page" }}
-    <article class="container">
+    <article>
       <h4 class="section-header">
         <div style="font-size: .7em">{{ partial "date-only.html" . }}, {{ .Params.author }}</div>
         <a href="{{ .Permalink }}">
