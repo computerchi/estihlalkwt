@@ -1,24 +1,19 @@
 <div>
-    <h3 class="section-header">اضاءات فلكية</h3>
+    <h1 >اضاءات فلكية</h1>
     {{ range first 2 (where .Site.Pages.ByPublishDate.Reverse "Section" "astroFlash") }}
     {{ if eq .Kind "page" }}
     <article class="container">
-      <h4>
+      <h4 class="section-header">
+        <div style="font-size: .7em">{{ partial "date-only.html" . }}, {{ .Params.author }}</div>
         <a href="{{ .Permalink }}">
           {{ .Title }}
         </a>
       </h4>
-      <div class="row bottom-shadow">
-        <div class="col-md-3">
-          {{ partial "date-only.html" . }} <br />
-          <div style="font-size: .9em">كتبها: {{ .Params.author }}</div>
-        </div>
-        <div class="col-md-9">
+      <div class="container">
           <span class="myFontSize">{{ .Summary }}</span>
           <a href="{{ .Permalink }}">
-            إقرأ الموضوع كاملاً
+            إقرأ المزيد
           </a>
-        </div>
       </div>
       <br />
     </article>
